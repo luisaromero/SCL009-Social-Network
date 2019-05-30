@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKTOy14awz0b3xXLbAREZR9SsQYLDbTQg",
+    authDomain: "nuevo-intento-44e7d.firebaseapp.com",
+    databaseURL: "https://nuevo-intento-44e7d.firebaseio.com",
+    projectId: "nuevo-intento-44e7d",
+    storageBucket: "nuevo-intento-44e7d.appspot.com",
+    messagingSenderId: "295490069163",
+    appId: "1:295490069163:web:e8a6af5b487d7fb3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+    <h4>Registro de usuaries</h4>
+    <input id="mail" type="text" placeholder="ingresa tu correo">
+    <input id= "contraseña" type="password" placeholder="ingresa tu contraseña">
+    <button onclick="registrar()">enviar</button>
+    <h4>ingreso de usuaries</h4>
+    <input id="mail2" type="text" placeholder="ingresa tu correo">
+    <input id= "contraseña2" type="password" placeholder="ingresa tu contraseña">
+    <button onclick="ingresar()">acceder</button>
+
+    <div id="contenido">
+      
+        
+    </div>
+       
+    
+  
+<script src="app.js"></script>
+</body>
+</html>
