@@ -2,12 +2,19 @@
 body{
     background-color:#F9F3F3;
 }
+h1{
+    font-family: 'Headland One', serif;
+    font-size:70px;
+    color:rgba(224, 113, 9, 0.945);
+}
+h2{
+    margin-left:100px;
+}
 button{
    
 width: 232px;
 height: 43px;
-left: 67px;
-top: 278px;
+
 margin-top:20px;
 background: rgba(156, 211, 64, 0.98);
 border: 1px solid #000000;
