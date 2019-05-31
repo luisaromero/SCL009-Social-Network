@@ -1,8 +1,9 @@
 //observador que ve si entra o se registra un usuarie antigue o nuevx
-import {btnIngresar, btnEnviar,cerrar} from './sign.js'
+import {btnIngresar, btnEnviar, btnCerrar} from './sign.js'
+
 btnIngresar();
 btnEnviar();
-cerrar();
+btnCerrar();
 
 export function observador(){
   
