@@ -1,8 +1,15 @@
+import { btnIngresar, btnEnviar, cerrar } from './assets/js/sign.js';
+import { observador, aparece } from './assets/js/signcont.js';
 
-import {ingresar, registrar,cerrar} from './sign.js';
+btnIngresar();
+btnEnviar();
+cerrar();
+/*
+import { ingresar, registrar,cerrar } from './assets/js/sign.js'
+
 ingresar();
 registrar();
-cerrar();
-import { observador, aparece } from './assets/js/signcont.js'
+cerrar();*/
+
 observador();
 aparece();
