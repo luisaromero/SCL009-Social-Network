@@ -4,12 +4,6 @@ btnIngresar();
 btnEnviar();
 cerrar();
 
-/*//observador que ve si entra o se registra un usuarie antigue o nuevx
-import {ingresar, registrar,cerrar} from './sign.js';
-ingresar();
-registrar();
-cerrar();*/
-
 export function observador(){
   
     console.log("existe usuario activo")
