@@ -1,0 +1,1 @@
+//primera pagina de temple con botones iniciar y registar mas google nos lleva a pagina de registro y pagina de inicio
