@@ -22,7 +22,7 @@ btnEnviar.addEventListener("click", () => {
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
 //-----------------INGRESO USUARIO REGISTRADO ------------------
-export const btnIngresar= document.getElementById("ingresar");
+export const btnIngresar = document.getElementById("ingresar");
 btnIngresar.addEventListener("click", () => {
     let email2= document.getElementById("mail2").value;
     let password2=document.getElementById("contraseña2").value;
@@ -39,7 +39,9 @@ btnIngresar.addEventListener("click", () => {
       });
 })
 //cerrar sesion
-export const cerrar = () => {
+export const btnCerrar= document.getElementById("cerrar");
+btnCerrar.addEventListener("click",() => {
+
     firebase.auth().signOut()
     .then(function(){
         console.log("saliirrrr")
@@ -47,4 +49,5 @@ export const cerrar = () => {
     .catch(function(error){
         console.log(error)
     })
-}
+
+})
