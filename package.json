@@ -1,28 +1,29 @@
 {
   "name": "scl009-social-network",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "red social huerta",
   "main": "src/index.html",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "jest --coverage", 
-    "eslint":"eslint --ext .js src/ test/",
-    "htmlhint":"htmlhint src/*.html",
+    "test": "jest --coverage",
+    "eslint": "eslint--ext .js src/ test/",
+    "htmlhint": "htmlhint src/*.html",
     "pretest": "npm run eslint && npm run htmlhint",
-    "deploy":"gh-pages -d src/"
+    "deploy": "gh-pages -d src/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luisaromero/SCL009-Social-Network.git"
   },
   "keywords": [
-    "firebase",
-    "redsocial",
-    "huerta"
+    "red",
+    "social",
+    "test",
+    "npm",
+    "historia",
+    "de",
+    "usuario"
   ],
-  "author": "Laura Silva denis ferreira luisa romero",
+  "author": "denisse , laura , luisa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luisaromero/SCL009-Social-Network/issues"
