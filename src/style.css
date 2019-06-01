@@ -1,7 +1,7 @@
 
 body{
     background-image:url('http://wintablet.info/wp-content/uploads/2017/01/10f181fe73f9b5a7ee0be9eaac388562_mca-partners-with-growing-plant-growing-clipart_1917-1002.jpeg');
-
+    background-size: cover;
 }
 h1{
     font-family: 'Headland One', serif;
@@ -10,6 +10,11 @@ h1{
 }
 h2{
     margin-left:100px;
+}
+h1{
+    font-family: 'Belgrano', serif;
+    font-size:70px;
+    margin-left:540px;
 }
 button{
    
@@ -35,6 +40,9 @@ mix-blend-mode: normal;
 border: 1px solid rgba(0, 0, 0, 0.32);
 box-sizing: border-box;
 }
-#registro , #ingreso{
+#registro , #ingreso , #cerrar{
     display:none;
+}
+#ingrese{
+margin-left:600px;
 }
