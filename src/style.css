@@ -37,7 +37,7 @@ border-radius: 22px;
      background: rgba(196, 196, 196, 0.37);
     border-radius: 20px;
     display:block;
-    background-image:url('https://cdn.pixabay.com/photo/2015/10/31/12/56/google-1015752_960_720.png');
+    background-image:url('./img/google.png');
     background-position:25px;
     background-repeat:no-repeat;
     background-size:20px;
