@@ -18,17 +18,17 @@
 //   containerRoot.innerHTML = '';
 
 //   switch (router) {
-//     case 'about':
+//     case 'inicio':
 //       templateInitial();
 //       break;
-//     case 'project':
+//     case 'registrate':
 //       templateRegister();
 //       break;
-//     case 'home':
+//     case 'entrar':
 //       templateSigIn();
 //       break;
 //     case '':
-//       templateHome();
+//       templateInitial();
 //       break;
 //     default:
 //       containerRoot.innerHTML = `<h1>Error 404</h1>`
