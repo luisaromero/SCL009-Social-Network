@@ -1,25 +1,17 @@
-// import { btnIngresar, btnEnviar,  btnCerrar } from './assets/js/sign.js';
-// import { observador, aparece } from './assets/js/signcont.js';
+import { btnIngresar, btnEnviar,  btnCerrar } from './assets/js/sign.js';
+import { observador, aparece } from './assets/js/signcont.js';
 
-// btnIngresar();
-// btnEnviar();
-// btnCerrar();
-// /*
-// import { ingresar, registrar,cerrar } from './assets/js/sign.js'
+btnIngresar();
+btnEnviar();
+btnCerrar();
 
-// ingresar();
-// registrar();
-// cerrar();*/
+import { ingresar, registrar,cerrar } from './assets/js/sign.js'
 
-// observador();
-// aparece();
+ingresar();
+registrar();
+cerrar();
 
-import { initRouter } from './route.js';
-// import { initFirebase } from './assets/js/firebaseInit.js;
+observador();
+aparece();
 
-const init = () => {
-  //initFirebase();
-  initRouter();
-}
 
-window.addEventListener('load', init);
