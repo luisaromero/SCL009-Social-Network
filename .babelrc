@@ -1,6 +1,4 @@
 {
     "plugins": ["@babel/plugin-transform-modules-commonjs"]
-   }
+}
 
-
-//    inport y export

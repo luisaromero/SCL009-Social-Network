@@ -1,34 +1,34 @@
 {
   "name": "scl009-social-network",
   "version": "0.0.1",
-  "description": "Red Social Huerta",
-  "main": "src/index.html ",
-  "directories": {
-    "test": "test"
-  },
+  "description": "red social huerta",
+  "main": "src/index.html",
   "scripts": {
     "test": "jest --coverage",
-    "eslint": "eslint --ext .js src/ test/",
+    "eslint": "eslint--ext .js src/ test/",
     "htmlhint": "htmlhint src/*.html",
     "pretest": "npm run eslint && npm run htmlhint",
-    "deploy" : "gh-pages -d src/"
+    "deploy": "gh-pages -d src/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DenisseFerreira/SCL009-Social-Network.git"
+    "url": "git+https://github.com/luisaromero/SCL009-Social-Network.git"
   },
   "keywords": [
-    "firebase",
-    "redsocial",
+    "red",
+    "social",
     "test",
-    "npm"
+    "npm",
+    "historia",
+    "de",
+    "usuario"
   ],
-  "author": "Denisse, Laura, Luisa",
+  "author": "denisse , laura , luisa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DenisseFerreira/SCL009-Social-Network/issues"
+    "url": "https://github.com/luisaromero/SCL009-Social-Network/issues"
   },
-  "homepage": "https://github.com/DenisseFerreira/SCL009-Social-Network#readme",
+  "homepage": "https://github.com/luisaromero/SCL009-Social-Network#readme",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
