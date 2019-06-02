@@ -20,7 +20,6 @@ h4{
     font-size:25px;
 }
 button{
-   
 width: 232px;
 height: 43px;
 font-size:17px;
@@ -30,11 +29,12 @@ border: 1px solid #000000;
 box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 22px;
+display:block;
 }
 #google{
     width: 227px;
     height: 33px;
-     background: rgba(196, 196, 196, 0.37);
+    background: rgba(196, 196, 196, 0.37);
     border-radius: 20px;
     display:block;
     background-image:url('./img/google.png');
@@ -58,6 +58,7 @@ box-sizing: border-box;
 #registro , #ingreso , #cerrar{
     display:none;
 }
-#ingrese{
+#root{
 margin-left:600px;
+margin-top:70px;
 }
