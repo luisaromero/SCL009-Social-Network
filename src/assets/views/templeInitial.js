@@ -8,6 +8,6 @@ export const templateHome = () => {
     <button id="google">Accede con google</button>`
   document.getElementById('registrate').addEventListener('click', () => {
     templateAbout();
-    window.location.hash = '#/about';
+    window.location.hash = '#/registrate';
   })
 }
