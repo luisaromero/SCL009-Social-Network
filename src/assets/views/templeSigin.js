@@ -1,5 +1,7 @@
 import { templateHome } from './templeInitial.js';
-import {btnEnviar,verificar} from '../js/sign.js'
+import {verificar} from '../js/sign.js'
+import {btnEnviar} from '../js/sign.js'
+
 
 verificar();
 
@@ -14,8 +16,11 @@ export const templateAbout = () => {
     
   
     document.getElementById('enviar').addEventListener('click', () => {
-          btnEnviar()
+    let email= document.getElementById("mail").value;
+     let  password=document.getElementById("contraseña").value;
+    btnEnviar(email, password);
       console.log("funciona boton enviar");
+      
      
 
      

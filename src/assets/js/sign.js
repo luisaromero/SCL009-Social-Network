@@ -2,11 +2,10 @@
 
 //-------------REGISTRO DE USUARIO----------------
 
-export function btnEnviar() {
-    console.log("funciona boton enviar");
-    let email= document.getElementById("mail").value;
-    let  password=document.getElementById("contraseña").value;
-    firebase.auth().createUserWithEmailAndPassword(email,password)
+export function btnEnviar(a,b) {
+    console.log("funciona boton enviar a > "+a+" | b > "+b);
+    
+    firebase.auth().createUserWithEmailAndPassword(a,b)
     .then(function(){
 
       verificar();
@@ -22,7 +21,6 @@ export function btnEnviar() {
         // ...
       });
 }
-btnEnviar();
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
 //-----------------INGRESO USUARIO REGISTRADO ------------------
@@ -47,7 +45,7 @@ btnIngresar.addEventListener("click", () => {
 //registro usuario
  export function verificar(){
     var user = firebase.auth().currentUser;
-
+if(!user) return;
 user.sendEmailVerification().then(function() {
   // Email sent.
 }).catch(function(error) {
