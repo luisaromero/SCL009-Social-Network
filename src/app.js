@@ -1,4 +1,3 @@
-import {btnEnviar,btnIngresar} from './assets/js/sign.js'
-
-btnEnviar();
-btnIngresar();
+import {observador,aparece} from './assets/js/sign.js'
+observador();
+aparece();
