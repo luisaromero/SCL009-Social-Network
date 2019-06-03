@@ -1,19 +1,15 @@
-import{observador,aparece} from './signcont.js';
-observador();
-aparece();
-//btnCerrar();
+
 
 //-------------REGISTRO DE USUARIO----------------
 
-export const btnEnviar= document.getElementById("enviar");
-btnEnviar.addEventListener("click", () => {
+export function btnEnviar() {
     console.log("funciona boton enviar");
     let email= document.getElementById("mail").value;
-    let password=document.getElementById("contraseña").value;
-    firebase.auth().createUserWithEmailAndPassword( email,password)
+    let  password=document.getElementById("contraseña").value;
+    firebase.auth().createUserWithEmailAndPassword(email,password)
     .then(function(){
 
-        verificar();
+      verificar();
     })
     .catch(function(error) {
         // Handle Errors here.
@@ -25,7 +21,8 @@ btnEnviar.addEventListener("click", () => {
     //alert(errorMessage);
         // ...
       });
-})
+}
+btnEnviar();
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
 //-----------------INGRESO USUARIO REGISTRADO ------------------
@@ -48,7 +45,7 @@ btnIngresar.addEventListener("click", () => {
 
 
 //registro usuario
- function verificar(){
+ export function verificar(){
     var user = firebase.auth().currentUser;
 
 user.sendEmailVerification().then(function() {
@@ -59,3 +56,59 @@ user.sendEmailVerification().then(function() {
 });
 }
 verificar();
+
+
+export function observador(){
+  
+  console.log("existe usuario activo")
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+            aparece();//llamamos a la función que nos muestra lo que puede ver usuarix logeadx
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        console.log(user.emailVerified)
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // ...
+      } else {
+          console.log("no existe usuario activo")
+        // User is signed out.
+        // ...
+      }
+    });
+}
+observador();
+
+
+
+export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
+  let contenido = document.getElementById("contenido");
+  contenido.innerHTML= `
+ <h5> "solo puede ver esto unx usuarix activx"</h5>
+
+ <button id="cerrar" type="button">cierra sesión</button>
+  `
+}
+aparece();
+//cerrar sesion
+/*export const btnCerrar=document.getElementById("cerrar").addEventListener ("click",()=>{
+
+  console.log("esta cerrando")
+
+  firebase.auth().signOut()
+  .then(function(){
+      console.log("saliirrrr")
+  })
+  .catch(function(error){
+      console.log(error)
+  })
+ 
+
+
+  
+})
+btnCerrar();*/
