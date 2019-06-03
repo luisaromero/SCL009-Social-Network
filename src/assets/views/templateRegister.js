@@ -1,6 +1,6 @@
-import { templateHome } from './templeInitial.js';
+import { templateStart } from './templateStart.js';
 
-export const templateAbout = () => {
+export const templateRegister = () => {
   document.getElementById('root').innerHTML = `<h4>Registrate</h4>
   <input id="Mail" type="text" placeholder="Ingresa tu correo">
   <input id= "Contraseña" type="password" placeholder="Ingresa tu contraseña">
@@ -11,7 +11,7 @@ export const templateAbout = () => {
   document.getElementById('atras').addEventListener('click', () => {
     // llamar a la función que carga el template project
     // cambiar el hash a #/project
-    templateHome();
+    templateStart();
     window.location.hash = '#/inicio';
   })
 }

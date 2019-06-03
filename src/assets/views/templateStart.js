@@ -1,13 +1,13 @@
     
-import { templateAbout } from './templeSigin.js';
+import { templateRegister } from './templateRegister.js';
 
-export const templateHome = () => {
+export const templateStart = () => {
     document.getElementById('root').innerHTML = ` <button id="inicia">Inicia sesión</button>
     <h2>O</h2>
     <button id="registrate">Registrate</button>
     <button id="google">Accede con google</button>`
   document.getElementById('registrate').addEventListener('click', () => {
-    templateAbout();
+    templateRegister();
     window.location.hash = '#/registrate';
   })
 }
