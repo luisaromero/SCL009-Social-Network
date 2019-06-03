@@ -3,7 +3,7 @@ import { templateAbout } from './assets/views/templeSigIn.js';
 import { templateHome } from './assets/views/templeInitial.js';
 
 const changeRoute = (hash) => {
-  if (hash === '#/about' || hash === '#/project' || hash === '#/home' || hash === '' || hash === '#/' || hash === '/#') {
+  if (hash === '#/registrate' || hash === '#/project' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
   return showTemplate(hash)
@@ -18,13 +18,13 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    case 'about':
+    case 'registrate':
       templateAbout();
       break;
     case 'project':
       templateProject();
       break;
-    case 'home':
+    case 'inicio':
       templateHome();
       break;
     case '':
