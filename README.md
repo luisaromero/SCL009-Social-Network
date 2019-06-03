@@ -3,7 +3,7 @@
 
 1. COMO amante de las plantas QUIERO crear una cuenta en la página PARA poder ingresar a la comunidad de forma segura
 Criterios de aceptación.
-    • Permitir al usuario registrarse con su nombre, apellido, correo y contraseña.
+    • Permitir al usuario registrarse con su nombre, correo y contraseña.
     • Generar mensaje de error si olvida rellenar algún campo.
     • Generar mensaje de error si el correo es inválido.
     • Generar mensaje de error cuando ingrese una contraseña menor a 6 caracteres.
@@ -38,11 +38,6 @@ Definición de terminado:
 - Haces test unitarios y, además, has testeado tu producto manualmente.
 - Hiciste pruebas de usabilidad e incorporaste el feedback del usuario.
 - Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-
-      
-       
-3. 
 
 4. COMO usuario amante de las plantas QUIERO publicar en el muro PARA poder resolver mis dudas o compartir experiencias
 
