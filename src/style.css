@@ -1,13 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 body{
     background-image:url('http://wintablet.info/wp-content/uploads/2017/01/10f181fe73f9b5a7ee0be9eaac388562_mca-partners-with-growing-plant-growing-clipart_1917-1002.jpeg');
     background-size: cover;
     position: relative;
     height:100vh;
     overflow:hidden;
+    
 }
 h1{
-    font-family: 'Headland One', serif;
+    font-family:'Fira Sans', sans-serif;
     font-size:150%;
     color:rgba(224, 113, 9, 0.945);
 }
@@ -16,23 +17,39 @@ h1{
 
 h4{
     font-size:25px;
+    font-family: 'Fira Sans', sans-serif;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom:10px;
+    font-family: 'Fira Sans', sans-serif;
 }
 button{
+ color: white;
 width: 232px;
 height: 43px;
 font-size:17px;
+margin-top:30px;
+background: rgba(22, 73, 27, 0.98);
+border-radius:7px;
 
-background: rgba(156, 211, 64, 0.98);
-margin-top: 10px;
-box-sizing: border-box;
-border-radius: 5px;
-display:block;
 font-weight: bold;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: hand;
+
+}
+
+button:hover {
+     background-color: #98c996;
+     color:black;
+     
 }
 #google{
+    color: black;
     width: 227px;
     height: 33px;
-    background: rgba(196, 196, 196, 0.37);
+    background:transparent;
     border-radius: 20px;
     font-weight: normal;
     display:block;
@@ -41,7 +58,7 @@ font-weight: bold;
     background-repeat:no-repeat;
     background-size:20px;
     font-size:14px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 input{
 display:block;
@@ -50,13 +67,25 @@ height: 36px;
 left: 60px;
 top: 281px;
 margin-top: 20px;
-background: rgba(196, 196, 196, 0.53);
+background: rgba(226, 248, 217, 0.53);
 mix-blend-mode: normal;
 border: 1px solid rgba(0, 0, 0, 0.32);
 box-sizing: border-box;
+padding: 10px;
+font-family: 'Fira Sans', sans-serif;
 }
 #registro , #ingreso ,#cerrar{
     display:none;
+}
+#about{
+    margin-top:90px;
+    background:transparent;
+    background-image:url('./img/plantar.png');
+    background-size:37px;
+    background-position:16px;
+    background-repeat:no-repeat;
+    height: 38px;
+    color: black;
 }
 
 
@@ -68,6 +97,7 @@ box-sizing: border-box;
 
     align-items: center;
     justify-content: space-around;
+    
 }
 .conteinerHead{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
@@ -77,4 +107,5 @@ box-sizing: border-box;
 
     align-items: center;
     justify-content: space-around;
+    
 }

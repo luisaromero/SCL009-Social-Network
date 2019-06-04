@@ -1,6 +1,7 @@
-import { templateAbout } from './assets/views/templeSigIn.js';
+import { templateStart } from './assets/views/templateStart.js';
+import { templateRegister } from './assets/views/templateRegister.js';
+import { templateAbout } from './assets/views/templateAbout.js';
 
-import { templateHome } from './assets/views/templeInitial.js';
 
 const changeRoute = (hash) => {
   if (hash === '#/registrate' || hash === '#/project' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
@@ -19,16 +20,16 @@ const showTemplate = (hash) => {
 
   switch (router) {
     case 'registrate':
+      templateRegister();
+      break;
+    case 'about':
       templateAbout();
       break;
-    case 'project':
-      templateProject();
-      break;
     case 'inicio':
-      templateHome();
+      templateStart();
       break;
     case '':
-      templateHome();
+      templateStart();
       break;
     default:
       containerRoot.innerHTML = `<h1>Error 404</h1>`
