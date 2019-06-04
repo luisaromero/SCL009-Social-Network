@@ -1,8 +1,8 @@
 
 import { templateStart } from './templateStart.js';
-import {btnEnviar,verificar} from '../js/sign.js'
+// import {btnEnviar,verificar} from '../js/sign.js'
 
-verificar();
+// verificar();
 
 export const templateRegister = () => {
   document.getElementById('root').innerHTML = `<h4>Registrate</h4>
@@ -14,14 +14,11 @@ export const templateRegister = () => {
     document.getElementById('enviar').addEventListener('click', () => {
           btnEnviar()
       console.log("funciona boton enviar");
-     
-
-     
-  
+    
     })
   document.getElementById('atras').addEventListener('click', () => {
-    // llamar a la función que carga el template project
-    // cambiar el hash a #/project
+    // Nos lleva al inicio de la pagina
+    // cambiar el hash a #/inicio
     templateStart();
     window.location.hash = '#/inicio';
   })

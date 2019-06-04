@@ -17,22 +17,24 @@ h1{
 h4{
     font-size:25px;
 }
+h2{
+    margin-top: 20px;
+    margin-bottom:10px;
+}
 button{
 width: 232px;
 height: 43px;
 font-size:17px;
-
+margin-top:30px;
 background: rgba(156, 211, 64, 0.98);
-margin-top: 10px;
-box-sizing: border-box;
-border-radius: 5px;
+border-radius:7px;
 display:block;
 font-weight: bold;
 }
 #google{
     width: 227px;
     height: 33px;
-    background: rgba(196, 196, 196, 0.37);
+    background:transparent;
     border-radius: 20px;
     font-weight: normal;
     display:block;
@@ -41,7 +43,7 @@ font-weight: bold;
     background-repeat:no-repeat;
     background-size:20px;
     font-size:14px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 input{
 display:block;
@@ -54,9 +56,19 @@ background: rgba(196, 196, 196, 0.53);
 mix-blend-mode: normal;
 border: 1px solid rgba(0, 0, 0, 0.32);
 box-sizing: border-box;
+padding: 10px;
 }
 #registro , #ingreso ,#cerrar{
     display:none;
+}
+#about{
+    margin-top:90px;
+    background:transparent;
+    background-image:url('./img/plantar.png');
+    background-size:37px;
+    background-position:16px;
+    background-repeat:no-repeat;
+    height: 38px;
 }
 
 

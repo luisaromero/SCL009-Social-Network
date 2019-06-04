@@ -1,3 +1,3 @@
-import {observador,aparece} from './assets/js/sign.js'
-observador();
-aparece();
+// import {observador,aparece} from './assets/js/sign.js'
+// observador();
+// aparece();

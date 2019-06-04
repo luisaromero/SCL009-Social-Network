@@ -1,6 +1,7 @@
-import { templateRegister } from './assets/views/templateRegister.js';
-
 import { templateStart } from './assets/views/templateStart.js';
+import { templateRegister } from './assets/views/templateRegister.js';
+import { templateAbout } from './assets/views/templateAbout.js';
+
 
 const changeRoute = (hash) => {
   if (hash === '#/registrate' || hash === '#/project' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
@@ -21,8 +22,8 @@ const showTemplate = (hash) => {
     case 'registrate':
       templateRegister();
       break;
-    case 'project':
-      templateProject();
+    case 'about':
+      templateAbout();
       break;
     case 'inicio':
       templateStart();
