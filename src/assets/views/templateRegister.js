@@ -2,6 +2,7 @@
 import { templateStart } from './templateStart.js';
 import {verificar} from '../js/sign.js'
 import {btnEnviar} from '../js/sign.js'
+import {validateRegister} from '../js/auth.js'
 verificar();
 
 export const templateRegister = () => {
@@ -16,16 +17,9 @@ export const templateRegister = () => {
     document.getElementById('enviar').addEventListener('click', () => {
       let email= document.getElementById("mail").value;
        let  password=document.getElementById("contraseña").value;
-      btnEnviar(email, password,name);
       
-    if(email ===""){
-        document.getElementById('invalidemail').innerHTML=`Debes ingresar un email`;
-    }
-    if (password ===""){
-        document.getElementById('invalidpassword').innerHTML=`Debes ingresar constraseña`;
-    }
-    
-    
+    btnEnviar(email, password,name);
+    validateRegister(email , password)
         console.log("funciona boton enviar"); 
     })
   document.getElementById('atras').addEventListener('click', () => {
