@@ -12,8 +12,8 @@ export function btnEnviar(a,b,c) {
   })
   .catch(function(error) {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorCode = alert(error.code);
+      var errorMessage = alert(error.message);
       console.log(errorCode);
       console.log(errorMessage);
   //alert(errorCode);
@@ -86,8 +86,7 @@ observador();
 export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
 let contenido = document.getElementById("contenido");
 contenido.innerHTML= `
-<h5> "solo puede ver esto unx usuarix activx"</h5>
-
+<h5> </h5>
 <button id="cerrar" type="button">cierra sesión</button>
 `
 }
