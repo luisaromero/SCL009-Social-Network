@@ -12,7 +12,7 @@ export const templateRegister = () => {
   <input id= "contraseña" type="password" placeholder="Ingresa tu contraseña">
   <p id ="invalidpassword"><p>
   <button id="enviar" type="button">Enviar</button>
-  <button id="atras" type="button">Atras</button>
+  <button id="atras" type="button"></button>
     `
     document.getElementById('enviar').addEventListener('click', () => {
       let email= document.getElementById("mail").value;
