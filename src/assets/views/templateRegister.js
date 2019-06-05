@@ -3,12 +3,16 @@
 import { templateStart } from './templateStart.js';
 import {verificar} from '../js/sign.js'
 import {btnEnviar} from '../js/sign.js'
+import {validateRegister} from '../js/auth.js'
 verificar();
+
 
 export const templateRegister = () => {
   document.getElementById('root').innerHTML = `<h4>Registrate</h4>
   <input id="mail" type="text" placeholder="Ingresa tu correo">
+  <p id ="invalidemail"><p>
   <input id= "contraseña" type="password" placeholder="Ingresa tu contraseña">
+  <p id ="invalidpassword"><p>
   <button id="enviar" type="button">Enviar</button>
   <button id="atras" type="button">Atras</button>
   
@@ -17,6 +21,7 @@ export const templateRegister = () => {
     let email= document.getElementById("mail").value;
      let  password=document.getElementById("contraseña").value;
     btnEnviar(email, password);
+    validateRegister()
       console.log("funciona boton enviar");
       
      
