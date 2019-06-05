@@ -10,8 +10,9 @@ export const templateAbout =() => {
     document.getElementById('root').innerHTML = `
     <div class="contenedor">
   <p>Quienes somos ... </p>
-  <button id="atras" ></button>
+<button id="atras" ></button>
   </div>
+
     `
     document.getElementById('back').addEventListener('click', () => {
         templateStart();

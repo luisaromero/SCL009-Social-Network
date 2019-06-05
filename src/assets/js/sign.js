@@ -3,8 +3,7 @@
 //-------------REGISTRO DE USUARIO----------------
 
 export function btnEnviar(a,b) {
-  
-  firebase.auth().createUserWithEmailAndPassword(a,b)
+ firebase.auth().createUserWithEmailAndPassword(a,b)
   .then(function(){
 
     verificar();
@@ -20,6 +19,7 @@ export function btnEnviar(a,b) {
   //alert(errorMessage);
       // ...
     });
+
 }
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
@@ -42,8 +42,8 @@ btnIngresar.addEventListener("click", () => {
 
 
 //registro usuario
-export function verificar(){
-  var user = firebase.auth().currentUser;
+ export function verificar(){
+    var user = firebase.auth().currentUser;
 if(!user) return;
 user.sendEmailVerification().then(function() {
 // Email sent.

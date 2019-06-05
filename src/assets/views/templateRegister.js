@@ -1,4 +1,5 @@
 
+
 import { templateStart } from './templateStart.js';
 import {verificar} from '../js/sign.js'
 import {btnEnviar} from '../js/sign.js'
@@ -42,6 +43,7 @@ export const templateRegister = () => {
     document.getElementById('invalidemail').innerHTML="";
     document.getElementById('invalidpassword').innerHTML="";
      } })
+
 
   document.getElementById('atras').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
