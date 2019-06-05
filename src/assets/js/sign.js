@@ -2,8 +2,7 @@
 
 //-------------REGISTRO DE USUARIO----------------
 
-export function btnEnviar(a,b,c) {
-  console.log("funciona boton enviar a > "+a+" | b > "+b +"| c > "+c);
+export function btnEnviar(a,b) {
   
   firebase.auth().createUserWithEmailAndPassword(a,b)
   .then(function(){
@@ -12,10 +11,11 @@ export function btnEnviar(a,b,c) {
   })
   .catch(function(error) {
       // Handle Errors here.
-      var errorCode = alert(error.code);
-      var errorMessage = alert(error.message);
-      console.log(errorCode);
-      console.log(errorMessage);
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorCode)
+      alert(errorMessage)
+
   //alert(errorCode);
   //alert(errorMessage);
       // ...
@@ -26,7 +26,6 @@ export function btnEnviar(a,b,c) {
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export const btnIngresar = document.getElementById("ingresar");
 btnIngresar.addEventListener("click", () => {
-  console.log("funciona boton");
   let email2= document.getElementById("mail2").value;
   let password2=document.getElementById("contraseña2").value;
   firebase.auth().signInWithEmailAndPassword(email2, password2)
@@ -35,8 +34,8 @@ btnIngresar.addEventListener("click", () => {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
+      alert(errorCode);
+      alert(errorMessage);
   
     });
 })
@@ -49,7 +48,7 @@ if(!user) return;
 user.sendEmailVerification().then(function() {
 // Email sent.
 }).catch(function(error) {
-  console.log(error)
+  alert(error)
 // An error happened.
 });
 }
@@ -58,14 +57,13 @@ verificar();
 
 export function observador(){
 
-console.log("existe usuario activo")
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
           aparece();//llamamos a la función que nos muestra lo que puede ver usuarix logeadx
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
-      console.log(user.emailVerified)
+    
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
@@ -73,7 +71,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       var providerData = user.providerData;
       // ...
     } else {
-        console.log("no existe usuario activo")
       // User is signed out.
       // ...
     }

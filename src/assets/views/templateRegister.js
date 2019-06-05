@@ -19,8 +19,7 @@ export const templateRegister = () => {
        let  password=document.getElementById("contraseña").value;
       
     btnEnviar(email, password,name);
-    validateRegister(email , password)
-        console.log("funciona boton enviar"); 
+    validateRegister(email , password) 
     })
   document.getElementById('atras').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
