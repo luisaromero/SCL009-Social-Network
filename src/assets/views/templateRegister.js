@@ -1,5 +1,4 @@
 
-
 import { templateStart } from './templateStart.js';
 import {verificar} from '../js/sign.js'
 import {btnEnviar} from '../js/sign.js'
@@ -20,8 +19,10 @@ export const templateRegister = () => {
   <p id ="invalidemail"><p>
   <input id= "contraseña" type="password" placeholder="Ingresa tu contraseña">
   <p id ="invalidpassword"><p>
+  <div class="enviarAtras">
   <button id="enviar" class="btn1" >Enviar</button>
   <button id="atras" type="button"></button>
+  </div>
   </div>
     `
     document.getElementById('enviar').addEventListener('click', () => {
@@ -34,8 +35,6 @@ export const templateRegister = () => {
        if (password.length <=6){
         document.getElementById("invalidpassword").innerHTML="Ingresa una contraseña mayor a 6 digitos"
        } 
-    
-    
     
        if(verif=== true) { 
            btnEnviar(email, password,name);

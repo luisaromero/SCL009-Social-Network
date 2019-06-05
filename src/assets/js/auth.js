@@ -1,6 +1,6 @@
 export const validateRegister = (email,password) => {
-  let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
- if (email===""||password===""){
+  if (email===""||password===""){
+   
     return false;
 }
 

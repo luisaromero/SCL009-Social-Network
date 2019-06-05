@@ -3,23 +3,23 @@
 //-------------REGISTRO DE USUARIO----------------
 
 export function btnEnviar(a,b) {
- firebase.auth().createUserWithEmailAndPassword(a,b)
-  .then(function(){
+    console.log("funciona boton enviar a > "+a+" | b > "+b);
+    
+    firebase.auth().createUserWithEmailAndPassword(a,b)
+    .then(function(){
 
-    verificar();
-  })
-  .catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorCode)
-      alert(errorMessage)
-
-  //alert(errorCode);
-  //alert(errorMessage);
-      // ...
-    });
-
+      verificar();
+    })
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+    //alert(errorCode);
+    //alert(errorMessage);
+        // ...
+      });
 }
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){

@@ -16,8 +16,7 @@ export const templateStart = () => {
     <h2>O</h2>
     <button id="registrate" class="btn">Registrate</button>
     <button id="google">Acceder con Google</button>
-     <button id="about" >Quienes somos </button>
-     </div>`
+    `
     
   document.getElementById('registrate').addEventListener('click', () => {
     templateRegister();
