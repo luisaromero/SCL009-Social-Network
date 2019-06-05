@@ -17,6 +17,12 @@ export const templateRegister = () => {
     document.getElementById('enviar').addEventListener('click', () => {
       let email= document.getElementById("mail").value;
        let  password=document.getElementById("contraseña").value;
+       if(email ===""){
+        document.getElementById('invalidemail').innerHTML=`Debes ingresar un email`;
+    }
+    if (password ===""){
+        document.getElementById('invalidpassword').innerHTML=`Debes ingresar constraseña`;
+    }
       
     btnEnviar(email, password,name);
     validateRegister(email , password) 
