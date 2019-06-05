@@ -1,4 +1,6 @@
 
+ @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
 body{
     background-image:url('http://wintablet.info/wp-content/uploads/2017/01/10f181fe73f9b5a7ee0be9eaac388562_mca-partners-with-growing-plant-growing-clipart_1917-1002.jpeg');
     background-size: cover;
@@ -8,28 +10,33 @@ body{
 }
 h1{
     font-family: 'Headland One', serif;
-    font-size:150%;
-    color:rgba(224, 113, 9, 0.945);
+    font-size:20px;
+    color:rgba(48, 38, 28, 0.945);
 }
 
  
 
 h4{
-    font-size:25px;
+    font-size:30px;
+    font-family: 'Fira Sans', sans-serif;
 }
 h2{
     margin-top: 20px;
     margin-bottom:10px;
 }
-button{
-width: 232px;
-height: 43px;
-font-size:17px;
-margin-top:30px;
-background: rgba(156, 211, 64, 0.98);
-border-radius:7px;
-display:block;
-font-weight: bold;
+.btn{
+    color: white;
+    width: 232px;
+    height: 43px;
+    font-size:17px;
+    margin-top:30px;
+    background: rgba(22, 73, 27, 0.98);
+    border-radius:7px;
+    
+    font-weight: bold;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: hand;
 }
 #google{
     width: 227px;
@@ -49,53 +56,70 @@ input{
 display:block;
 width: 225px;
 height: 36px;
-left: 60px;
-top: 281px;
+
+
 margin-top: 20px;
 background: rgba(196, 196, 196, 0.53);
 mix-blend-mode: normal;
 border: 1px solid rgba(0, 0, 0, 0.32);
 box-sizing: border-box;
 padding: 10px;
+font-family: 'Fira Sans', sans-serif;
 }
 #registro , #ingreso ,#cerrar{
     display:none;
 }
 #about{
-    margin-top:90px;
-    background:transparent;
-    background-image:url('./img/plantar.png');
-    background-size:37px;
-    background-position:16px;
-    background-repeat:no-repeat;
-    height: 38px;
+margin-top: 13px;
+margin-right: 13px;
+height: 30px;
+width: 50px;
+font-size:10px;
+background:transparent;
+background-size:37px;
+font-family: 'Fira Sans', sans-serif;
+background: rgba(22, 73, 27, 0.98);
+color:white;
+    
 }
 
 
 .contenedor{
-       display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
-    display: -webkit-flex;/*prefijos necesarios*/
-    display: -ms-flexbox;/*prefijos necesarios*/
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: space-around;
-}
-.conteinerHead{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     display: -webkit-flex;/*prefijos necesarios*/
     display: -ms-flexbox;/*prefijos necesarios*/
-    flex-direction: row;
-
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+.conteinerH{
+    display: -webkit-flex;/*prefijos necesarios*/
+    display: -ms-flexbox;/*prefijos necesarios*/
+    display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #99cc33;
+  
+}
 #atras{
+    width: 232px;
+    height: 43px;
     background:transparent;
     background-image:url('./img/Button-Back.png');
-    background-position:left;
     background-size:40px;
     background-repeat:no-repeat;
-    width:43px;
     border: none;
+}
+.btn1{
+    color: white;
+    width: 200px;
+    height: 43px;
+    font-size:17px;
+    background: rgba(22, 73, 27, 0.98);
+    border-radius:7px;
+    font-weight: bold;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+
 }
