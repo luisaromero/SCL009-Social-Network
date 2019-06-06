@@ -15,3 +15,21 @@ describe ('validateRegister',()=>{
 })
 })
 
+import {validateSignIn} from './../src/assets/js/auth.js'
+describe ('validateSignIn',()=>{
+    it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
+        expect(validateSignIn("","")).toBe(false);
+    })
+   it ('deberia retornar true si es que ingresa correo y contraseña registrado', () =>{
+            expect(validateSignIn("estesmimail@gmail.com","hola1234")).toBe(true);
+     
+    })
+    it ('deberia retornar falso si no ingresas un correo valido', () =>{
+        expect(validateSignIn("estesmimailgmail.com","micontraseña")).toBe(false);
+    })
+    it ('deberia retornar falso si ingresas una contraseña menor a 6 digitos', () =>{
+        expect(validateSignIn("estesmimail@gmail.com","hi")).toBe(false);
+            
+})
+})
+

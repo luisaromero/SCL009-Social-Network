@@ -1,5 +1,6 @@
-
+import {verificar} from '../js/sign.js'
 import { btnIngresar} from '../js/sign.js'
+verificar()
 
 export const templateSignIn =() => {
     document.getElementById( "conteinerHead").innerHTML= ` 
