@@ -11,14 +11,17 @@ export const templateAbout =() => {
     <div class="somos">
     <div class="img"> 
     </div>
-     <p>Somos un lugar de encuentro entre humanes y su relación con la tierra, donde podemos compartir la experiancia, los saberes   aprendizajes,semillas, eventos y reportajes sobre huertos de todas las formas y colores, junto con la posibilidad de encontrasre en las huertas comunitarias existentes en tu comuna.
-      !mejoremos la vida a través de la tierra!</p>
+     <p>Somos un lugar de encuentro entre humanes y su relación con la tierra, donde podras compartir la experiencia,  podras preguntar
+      en el muro acerca de huertos y tus plantas  , si quieres plantar y aún no sabes mucho al respecto , los usuarios podrán responder tus dudas.
+      Además estamos compartiendo constantemente eventos sobre compost , vida sustentable , huertas comunitarias y permacultura.
+      <br>
+      ¡Mejoremos la vida a través de la tierra!
+      <br>
+      <br>¡Unete a nuestra red de huerteros!</p>
      <button id="atras" ></button>
      </div>
-
     `
     document.getElementById('atras').addEventListener('click', () => {
         templateStart();
         window.location.hash = '#/inicio';
-        
 })}
