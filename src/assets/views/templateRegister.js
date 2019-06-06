@@ -40,11 +40,7 @@ export const templateRegister = () => {
     
        if(verif=== true) { 
            btnEnviar(email, password,name);
-   
-    
      } })
-
-
   document.getElementById('atras').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
     // cambiar el hash a #/inicio

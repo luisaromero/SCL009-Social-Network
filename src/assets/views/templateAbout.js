@@ -20,4 +20,5 @@ export const templateAbout =() => {
     document.getElementById('atras').addEventListener('click', () => {
         templateStart();
         window.location.hash = '#/inicio';
+        
 })}

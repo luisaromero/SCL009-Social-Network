@@ -1,10 +1,11 @@
 import { templateStart } from './assets/views/templateStart.js';
 import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
+import { templateSignIn } from './assets/views/templateSignIn.js';
 
 
 const changeRoute = (hash) => {
-  if (hash === '#/registrate' || hash === '#/project' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
+  if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
   return showTemplate(hash)
@@ -27,6 +28,9 @@ const showTemplate = (hash) => {
       break;
     case 'inicio':
       templateStart();
+      break;
+      case 'entrar':
+      templateSignIn();
       break;
     case '':
       templateStart();

@@ -25,10 +25,7 @@ export function btnEnviar(a,b) {
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
 //-----------------INGRESO USUARIO REGISTRADO ------------------
-export const btnIngresar = document.getElementById("ingresar");
-btnIngresar.addEventListener("click", () => {
-  let email2= document.getElementById("mail2").value;
-  let password2=document.getElementById("contraseña2").value;
+export function btnIngresar(email2, password2){
   firebase.auth().signInWithEmailAndPassword(email2, password2)
 
   .catch(function(error) {
@@ -38,8 +35,9 @@ btnIngresar.addEventListener("click", () => {
       alert(errorCode);
       alert(errorMessage);
   
-    });
-})
+    })
+}
+
 
 
 //registro usuario
@@ -57,6 +55,8 @@ verificar();
 
 
 export function observador(){
+  console.log("existe usuario activo")
+
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -72,6 +72,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       var providerData = user.providerData;
       // ...
     } else {
+      console.log("no existe usuario activo")
+
       // User is signed out.
       // ...
     }
@@ -84,7 +86,7 @@ observador();
 export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
 let contenido = document.getElementById("contenido");
 contenido.innerHTML= `
-<h5> </h5>
+<h5></h5>
 <button id="cerrar" type="button">cierra sesión</button>
 `
 }

@@ -1,6 +1,9 @@
     
 import { templateRegister } from './templateRegister.js';
 import { templateAbout } from './templateAbout.js'
+import { templateSignIn } from './templateSignIn.js'
+
+
 
 export const templateStart = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -26,4 +29,9 @@ export const templateStart = () => {
   document.getElementById('about').addEventListener('click', () => {
     templateAbout();
     window.location.hash = '#/about';
-})}
+  })
+    document.getElementById('inicia').addEventListener('click', () => {
+      templateSignIn();
+      window.location.hash = '#/entrar';
+})
+}
