@@ -2,10 +2,10 @@ import { templateStart } from './assets/views/templateStart.js';
 import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
 import { templateSignIn } from './assets/views/templateSignIn.js';
-
+import { templateWall } from './assets/views/templateWall.js';
 
 const changeRoute = (hash) => {
-  if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' || hash === '' || hash === '#/' || hash === '/#') {
+  if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/muro'|| hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
   return showTemplate(hash)
@@ -35,6 +35,9 @@ const showTemplate = (hash) => {
     case '':
       templateStart();
       break;
+      case 'muro':
+        templateWall();
+        break;
     default:
       containerRoot.innerHTML = `<h1>Error 404</h1>`
   }
