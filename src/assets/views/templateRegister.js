@@ -3,6 +3,7 @@ import { templateStart } from './templateStart.js';
 import {verificar} from '../js/sign.js'
 import {btnEnviar} from '../js/sign.js'
 import {validateRegister} from '../js/auth.js'
+import {templateSignIn} from './templateSignIn.js'
 verificar();
 
 export const templateRegister = () => {
@@ -40,6 +41,7 @@ export const templateRegister = () => {
     
        if(verif=== true) { 
            btnEnviar(email, password,name);
+           templateSignIn();
      } })
   document.getElementById('atras').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina

@@ -1,5 +1,6 @@
 import {verificar} from '../js/sign.js'
 import { btnIngresar} from '../js/sign.js'
+import{templateWall} from './templateWall.js'
 verificar()
 
 export const templateSignIn =() => {
@@ -16,8 +17,10 @@ export const templateSignIn =() => {
     </div>`
     document.getElementById('ingresar').addEventListener('click', () => {
         let email2= document.getElementById("mail2").value;
-        let password2=document.getElementById("contraseña2").value;
+        let password2=document.getElementById("contraseña2").value; 
         btnIngresar(email2,password2)
+        templateWall();
+        window.location.hash = '#/muro';
 
 })
 }
