@@ -16,9 +16,9 @@ export const templateRegister = () => {
   <div class="contenedor">
   <h4>Registrate</h4>
   <input id="mail" type="text" placeholder="Ingresa tu correo">
-  <p id ="invalidemail"><p>
+  <p id ="invalid"><p>
   <input id= "contraseña" type="password" placeholder="Ingresa tu contraseña">
-  <p id ="invalidpassword"><p>
+  <p id="invalidpassword"></p>
   <div class="enviarAtras">
   <button id="enviar" class="btn1" >Enviar</button>
   <button id="atras" type="button"></button>
@@ -26,21 +26,22 @@ export const templateRegister = () => {
   </div>
     `
     document.getElementById('enviar').addEventListener('click', () => {
+      document.getElementById('invalid').innerHTML="";
+      document.getElementById('invalidpassword').innerHTML="";
       let email= document.getElementById("mail").value;
        let  password=document.getElementById("contraseña").value;
        let verif=validateRegister(email , password);
        if (verif=== false){
-         alert("pon un correo y contraseña valido")
+        document.getElementById("invalid").innerHTML="Ingresa correo y contraseña validos"
        }
        if (password.length <=6){
-        document.getElementById("invalidpassword").innerHTML="Ingresa una contraseña mayor a 6 digitos"
+        document.getElementById("invalidpassword").innerHTML="Ingresa contraseña mayor a 6 digitos"
        } 
     
        if(verif=== true) { 
            btnEnviar(email, password,name);
    
-    document.getElementById('invalidemail').innerHTML="";
-    document.getElementById('invalidpassword').innerHTML="";
+    
      } })
 
 

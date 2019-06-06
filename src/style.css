@@ -28,8 +28,9 @@ h2{
     font-family: 'Fira Sans', sans-serif;
 }
 p{
-    font-size:20px;
+    font-size:13px;
     font-family: 'Fira Sans', sans-serif;
+    margin-top:10px;
 
 }
 .btn{
@@ -40,7 +41,6 @@ p{
     margin-top:30px;
     background: rgba(22, 73, 27, 0.98);
     border-radius:7px;
-    
     font-weight: bold;
    
 }
@@ -149,6 +149,5 @@ color:white;
 }
 .img{
     background-image: url('https://i.ibb.co/3YQnR5q/tomates.jpg');
-   
 
 }

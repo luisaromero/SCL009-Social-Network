@@ -13,7 +13,8 @@ export function btnEnviar(a,b) {
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
-        var errorMessage = error.message;
+        var errorMessage = error.message
+        alert('Este email ya se ha registrado antes.')
         console.log(errorCode);
         console.log(errorMessage);
     //alert(errorCode);
