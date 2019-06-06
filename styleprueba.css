@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Itim&display=swap');
+.conteiner{
+    background-color:  rgb(195, 248, 188);
+  
+    display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
+    display: -webkit-flex;/*prefijos necesarios*/
+    display: -ms-flexbox;/*prefijos necesarios*/
+    justify-content:space-between;
+    align-items: center;
+}
+p{
+    font-family: 'Itim', cursive;
+}
+.logo{
+    margin: 5px;
+}
+.quienes_somos{
+    margin:  5px;
+    background-color: #73CA20;
+    font-family: 'Itim', cursive;
+    box-sizing: border-box;
+    
+    border-radius: 2px;
+}
+.fondo{
+    background-image: url('https://farm8.staticflickr.com/7889/39912002753_3c90c37b25_b.jpghttps://farm8.staticflickr.com/7889/39912002753_3c90c37b25_b.jpg');
+    position: relative;
+    height:100vh;
+    overflow:hidden;
+    
+}
+
+
+.conteiner2{
+    background-color: #E6FDE3;
+    display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
+    display: -webkit-flex;/*prefijos necesarios*/
+    display: -ms-flexbox;/*prefijos necesarios*/
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.btn{
+    margin:  5px;
+    background-color: rgb(41, 80, 4);
+    font-family: 'Itim', cursive;
+    color: white;
+    box-sizing: border-box;
+    
+    border-radius: 2px;
+    
+}
+body{
+    background-color:  #E6FDE3;
+}
+
