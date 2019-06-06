@@ -42,6 +42,7 @@ export const templateRegister = () => {
        if(verif=== true) { 
            btnEnviar(email, password,name);
            templateSignIn();
+           window.location.hash = '#/entrar'
      } })
   document.getElementById('atras').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina

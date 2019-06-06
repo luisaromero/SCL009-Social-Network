@@ -1,6 +1,7 @@
 import {verificar} from '../js/sign.js'
-import { btnIngresar} from '../js/sign.js'
+import { btnIngresar,observador} from '../js/sign.js'
 import{templateWall} from './templateWall.js'
+observador()
 verificar()
 
 export const templateSignIn =() => {
@@ -18,9 +19,11 @@ export const templateSignIn =() => {
     document.getElementById('ingresar').addEventListener('click', () => {
         let email2= document.getElementById("mail2").value;
         let password2=document.getElementById("contraseña2").value; 
+        let user = firebase.auth().currentUser;
         btnIngresar(email2,password2)
-        templateWall();
+        if (user) {
+          templateWall()
         window.location.hash = '#/muro';
-
+        }
 })
 }

@@ -61,7 +61,7 @@ export function observador(){
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      templateWall();//llamamos a la función que nos muestra lo que puede ver usuarix logeadx
+      //llamamos a la función que nos muestra lo que puede ver usuarix logeadx
       // User is signed in.
       var displayName = user.displayName;
       var email = user.email;
@@ -73,7 +73,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       var providerData = user.providerData;
       // ...
     } else {
-      templateRegister();
       console.log("no existe usuario activo")
 
       // User is signed out.
