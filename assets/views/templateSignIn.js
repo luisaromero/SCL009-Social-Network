@@ -22,7 +22,6 @@ export const templateSignIn =() => {
         let user = firebase.auth().currentUser;
         btnIngresar(email2,password2)
         if (user) {
-          templateWall()
         window.location.hash = '#/muro';
         }
 })

@@ -1,6 +1,5 @@
 
-import{templateWall} from '../views/templateWall.js'
-import{templateRegister} from '../views/templateRegister.js'
+
 //-------------REGISTRO DE USUARIO----------------
 
 export function btnEnviar(a,b) {
@@ -56,7 +55,6 @@ verificar();
 
 
 export function observador(){
-  console.log("existe usuario activo")
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -71,7 +69,9 @@ firebase.auth().onAuthStateChanged(function(user) {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-      // ...
+     console.log(uid)
+     console.log("usuario activo")
+      
     } else {
       console.log("no existe usuario activo")
 
@@ -80,7 +80,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
   });
 }
-observador();
 
 
 /*

@@ -13,7 +13,6 @@ export const templateRegister = () => {
   </div>
   `
   document.getElementById('root').innerHTML = `
- 
   <div class="contenedor">
   <h4>Registrate</h4>
   <input id="mail" type="text" placeholder="Ingresa tu correo">
@@ -25,22 +24,24 @@ export const templateRegister = () => {
   <button id="atras" type="button"></button>
   </div>
   </div>
-    `
+  `
     document.getElementById('enviar').addEventListener('click', () => {
       document.getElementById('invalid').innerHTML="";
       document.getElementById('invalidpassword').innerHTML="";
       let email= document.getElementById("mail").value;
        let  password=document.getElementById("contraseña").value;
+       let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
        let verif=validateRegister(email , password);
-       if (verif=== false){
-        document.getElementById("invalid").innerHTML="Ingresa correo y contraseña validos"
-       }
+       if (!regular.test(email)){
+        document.getElementById("invalid").innerHTML="Ingresa email valido"
+      }
        if (password.length <=6){
         document.getElementById("invalidpassword").innerHTML="Ingresa contraseña mayor a 6 digitos"
        } 
     
        if(verif=== true) { 
            btnEnviar(email, password,name);
+           alert('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
            templateSignIn();
            window.location.hash = '#/entrar'
      } })
