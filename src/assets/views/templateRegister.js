@@ -41,7 +41,7 @@ export const templateRegister = () => {
     
        if(verif=== true) { 
            btnEnviar(email, password,name);
-           alert('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
+           swal('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
            templateSignIn();
            window.location.hash = '#/entrar'
      } })

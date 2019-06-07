@@ -31,7 +31,7 @@ export function btnIngresar(email2, password2){
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      alert(errorCode);
+      console.log(errorCode)
       alert(errorMessage);
   
     })

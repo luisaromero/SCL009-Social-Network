@@ -38,6 +38,6 @@ export const templateStart = () => {
 })
 document.getElementById('google').addEventListener('click', () => {
   validateGoogle();
-  templateWall();
+  window.location.hash = '#/muro'
 })
 }
