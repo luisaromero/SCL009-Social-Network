@@ -1,31 +1,33 @@
-import{templateStart} from './templateStart.js'
-import { cerrar } from '../js/sign.js';
+
+import { cerrar,observador} from '../js/sign.js';
 
 export const templateWall =() => {
-
-    document.getElementById( "conteinerHead").innerHTML= ` 
-    <div class= "conteinerH">
-    <h1>KETRAWE</h1>
-    </div>
-    `
-      document.getElementById('root').innerHTML = `
-      <div class= "contenedor">
-       <p>aqui va lo de la denis</p>
-       <button id="atras" ></button>
-       <button id="cerrar" class= "btn" >cierra sesión</button>
-       </div>
-
-
-       
-  
-      `
+    let user = firebase.auth().currentUser;
+    observador(user)
+ switch(user){
+     case (!user):
+    window.location.hash = '';
+    break;
+  case(user): 
+document.getElementById( "conteinerHead").innerHTML= ` 
+<div class= "conteinerH">
+<h1>KETRAWE</h1>
+</div>
+`
+  document.getElementById('root').innerHTML = `
+  <div class= "contenedor">
+   <p>aqui va lo de la denis</p>
+   <button id="atras" ></button>
+   <button id="cerrar" class= "btn" >cierra sesión</button>
+   </div>
+  `
 document.getElementById('cerrar').addEventListener('click', () => {
- cerrar();
- templateStart();
- window.location.hash = '#/inicio';
+cerrar();
+window.location.hash = '#/inicio';
 
-    })
+})
 document.getElementById('atras').addEventListener('click', () => {
-    templateStart();
-    window.location.hash = '#/inicio';
-})};
+window.location.hash = '#/inicio';})
+ break;
+}
+ }

@@ -27,12 +27,11 @@ h2{
     margin-bottom:10px;
     font-family: 'Fira Sans', sans-serif;
 }
-p{
-    font-size:19px;
+p{  font-size:14px;
     font-family: 'Fira Sans', sans-serif;
-    margin-top:27px;
-    margin-right:25px;
-    margin-left:20px;
+    margin-top:10px;
+    margin-right:30px;
+    margin-left:30px;
 
 }
 .btn{
@@ -140,7 +139,11 @@ color:white;
 }
 .somos{
     
-  
+    font-size:19px;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top:27px;
+    margin-right:25px;
+    margin-left:20px;
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     display: -webkit-flex;/*prefijos necesarios*/
     display: -ms-flexbox;/*prefijos necesarios*/
