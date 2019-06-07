@@ -20,9 +20,8 @@ export const templateSignIn =() => {
         let email2= document.getElementById("mail2").value;
         let password2=document.getElementById("contraseña2").value; 
         let user = firebase.auth().currentUser;
-        
+        btnIngresar(email2,password2)
         if (user) {
-          btnIngresar(email2,password2)
         window.location.hash = '#/muro';
         }
 })

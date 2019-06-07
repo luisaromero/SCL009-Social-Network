@@ -3,12 +3,10 @@ import { cerrar,observador} from '../js/sign.js';
 
 export const templateWall =() => {
     let user = firebase.auth().currentUser;
-    observador(user)
- switch(user){
-     case (!user):
-    window.location.hash = '';
-    break;
-  case(user): 
+if (!user){
+    window.location.hash ='#/'
+} else{
+    
 document.getElementById( "conteinerHead").innerHTML= ` 
 <div class= "conteinerH">
 <h1>KETRAWE</h1>
@@ -28,6 +26,8 @@ window.location.hash = '#/inicio';
 })
 document.getElementById('atras').addEventListener('click', () => {
 window.location.hash = '#/inicio';})
- break;
 }
- }
+}
+
+
+ 

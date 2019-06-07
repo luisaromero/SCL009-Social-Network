@@ -69,11 +69,10 @@ firebase.auth().onAuthStateChanged(function(user) {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
-     
+     console.log(uid)
+     console.log("usuario activo")
       
     } else {
-      window.location.hash = '#/inicio';
-      
       console.log("no existe usuario activo")
 
       // User is signed out.
@@ -81,7 +80,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
   });
 }
-observador();
 
 
 /*
