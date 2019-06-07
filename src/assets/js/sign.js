@@ -1,5 +1,4 @@
 
-
 //-------------REGISTRO DE USUARIO----------------
 
 export function btnEnviar(a,b) {
