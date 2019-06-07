@@ -76,10 +76,11 @@ font-family: 'Fira Sans', sans-serif;
     display:none;
 }
 #about{
-margin-top: 13px;
-margin-right: 13px;
-height: 30px;
-width: 50px;
+margin-top: 5px;
+margin-bottom: 5px;
+margin-right: 10px;
+height: 40px;
+width: 60px;
 font-size:10px;
 background:transparent;
 background-size:37px;
@@ -109,14 +110,16 @@ color:white;
 
 }
 .conteinerH{
+    
     display: -webkit-flex;/*prefijos necesarios*/
     display: -ms-flexbox;/*prefijos necesarios*/
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     flex-direction: row;
     justify-content: space-between;
-    background-color: #99cc33;
+    background-color: #aac705;
   
 }
+
 #atras{
     width: 60px;
     height: 43px;
@@ -155,4 +158,8 @@ color:white;
 .img{
     background-image: url('https://i.ibb.co/3YQnR5q/tomates.jpg');
 
+}
+.logo{
+    width: 25%;
+    height: 25%;
 }
