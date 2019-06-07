@@ -2,6 +2,8 @@
 import { templateRegister } from './templateRegister.js';
 import { templateAbout } from './templateAbout.js'
 import { templateSignIn } from './templateSignIn.js'
+import { templateWall } from './templateWall.js'
+import {validateGoogle} from '../js/sign.js'
 
 
 
@@ -33,5 +35,9 @@ export const templateStart = () => {
     document.getElementById('inicia').addEventListener('click', () => {
       templateSignIn();
       window.location.hash = '#/entrar';
+})
+document.getElementById('google').addEventListener('click', () => {
+  validateGoogle();
+  templateWall();
 })
 }
