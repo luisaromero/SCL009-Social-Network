@@ -13,19 +13,19 @@ export const templateRegister = () => {
       </div>
       `
   document.getElementById('root').innerHTML = `
-      <div class="contenedor">
+      <div class="container">
       <h4>Registrate</h4>
       <input id="email" type="text" placeholder="Ingresa tu correo">
       <p id ="invalid"><p>
       <input id= "password" type="password" placeholder="Ingresa tu contraseña">
       <p id="invalidpassword"></p>
       <div class="enviarAtras">
-      <button id="enviar" class="btn1" >Enviar</button>
-      <button id="atras" type="button"></button>
+      <button id="send" class="btn1" >Enviar</button>
+      <button id="back" type="button"></button>
       </div>
       </div>
       `
-  document.getElementById('enviar').addEventListener('click', () => {
+  document.getElementById('send').addEventListener('click', () => {
   document.getElementById('invalid').innerHTML="";
   document.getElementById('invalidpassword').innerHTML="";
       let emailUser= document.getElementById("email").value;
@@ -44,7 +44,7 @@ export const templateRegister = () => {
            templateSignIn();
            window.location.hash = '#/entrar'
            }})
-  document.getElementById('atras').addEventListener('click', () => {
+  document.getElementById('back').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
     // cambiar el hash a #/inicio
     templateStart();

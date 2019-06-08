@@ -57,7 +57,7 @@ box-sizing: border-box;
 padding: 10px;
 font-family: 'Fira Sans', sans-serif;
 }
-#about{
+#btnAbout{
 margin-top: 5px;
 margin-bottom: 5px;
 margin-right: 10px;
@@ -70,7 +70,7 @@ font-family: 'Fira Sans', sans-serif;
 background: rgba(22, 73, 27, 0.98);
 color:white; 
 }
-.contenedor{
+.container{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     display: -webkit-flex;/*prefijos necesarios*/
     display: -ms-flexbox;/*prefijos necesarios*/
@@ -94,7 +94,7 @@ color:white;
     justify-content: space-between;
     background-color: #aac705; 
 }
-#atras{
+#back{
     width: 60px;
     height: 43px;
     background:transparent;
@@ -113,7 +113,7 @@ color:white;
     border-radius:7px;
     font-weight: bold;   
 }
-.somos{
+.aboutUs{
     font-size:19px;
     font-family: 'Fira Sans', sans-serif;
     margin-top:27px;
