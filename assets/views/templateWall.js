@@ -5,26 +5,26 @@ export const templateWall =() => {
     let user = firebase.auth().currentUser;
 if (!user){
     window.location.hash ='#/'
-} else{
+} if(user){
     
 document.getElementById( "conteinerHead").innerHTML= ` 
 <div class= "conteinerH">
-<h1>KETRAWE</h1>
+<img class="logo" src= "https://i.ibb.co/4J2DX8p/Whats-App-Image-2019-06-07-at-3-42-02-PM.jpg">
 </div>
 `
   document.getElementById('root').innerHTML = `
-  <div class= "contenedor">
+  <div class= "container">
    <p>aqui va lo de la denis</p>
-   <button id="atras" ></button>
-   <button id="cerrar" class= "btn" >cierra sesión</button>
+   <button id="back" ></button>
+   <button id="close" class= "btn" >cierra sesión</button>
    </div>
   `
-document.getElementById('cerrar').addEventListener('click', () => {
+document.getElementById('close').addEventListener('click', () => {
 cerrar();
 window.location.hash = '#/inicio';
 
 })
-document.getElementById('atras').addEventListener('click', () => {
+document.getElementById('back').addEventListener('click', () => {
 window.location.hash = '#/inicio';})
 }
 }

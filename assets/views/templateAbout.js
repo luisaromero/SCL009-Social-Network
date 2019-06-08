@@ -4,11 +4,11 @@ import { templateStart } from './templateStart.js'
 export const templateAbout =() => {
   document.getElementById( "conteinerHead").innerHTML= ` 
   <div class= "conteinerH">
-  <h1>KETRAWE</h1>
+  <img class="logo" src= "https://i.ibb.co/4J2DX8p/Whats-App-Image-2019-06-07-at-3-42-02-PM.jpg">
   </div>
   `
     document.getElementById('root').innerHTML = `
-    <div class="somos">
+    <div class="aboutUs">
     <div class="img"> 
     </div>
      <p>Somos un lugar de encuentro entre humanes y su relación con la tierra, donde podras compartir la experiencia,  podras preguntar
@@ -18,10 +18,10 @@ export const templateAbout =() => {
       ¡Mejoremos la vida a través de la tierra!
       <br>
       <br>¡Unete a nuestra red de huerteros!</p>
-     <button id="atras" ></button>
+     <button id="back" ></button>
      </div>
     `
-    document.getElementById('atras').addEventListener('click', () => {
+    document.getElementById('back').addEventListener('click', () => {
         templateStart();
         window.location.hash = '#/inicio';
 })}
