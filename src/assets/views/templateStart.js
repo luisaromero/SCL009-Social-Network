@@ -1,9 +1,8 @@
     
 import { templateRegister } from './templateRegister.js';
 import { templateAbout } from './templateAbout.js'
-import { templateSignIn } from './templateSignIn.js'
-import { templateWall } from './templateWall.js'
-import {validateGoogle} from '../js/sign.js'
+import { templateLogIn } from './templateLogIn.js'
+import {validateGoogle} from '../js/auth.js'
 
 export const templateStart = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -15,13 +14,13 @@ export const templateStart = () => {
   document.getElementById('root').innerHTML = ` 
    
     <div class="container">
-    <button id="inicia" class="btn">Inicia sesión</button>
+    <button id="btnLogIn" class="btn">Inicia sesión</button>
     <h2>O</h2>
-    <button id="registrate" class="btn">Registrate</button>
+    <button id="btnSignIn" class="btn">Registrate</button>
     <button id="btnGoogle">Acceder con Google</button>
     `
     
-  document.getElementById('registrate').addEventListener('click', () => {
+  document.getElementById('btnSignIn').addEventListener('click', () => {
     templateRegister();
     window.location.hash = '#/registrate';
     
@@ -30,8 +29,8 @@ export const templateStart = () => {
     templateAbout();
     window.location.hash = '#/about';
   })
-    document.getElementById('inicia').addEventListener('click', () => {
-      templateSignIn();
+    document.getElementById('btnLogIn').addEventListener('click', () => {
+      templateLogIn();
       window.location.hash = '#/entrar';
 })
 document.getElementById('btnGoogle').addEventListener('click', () => {

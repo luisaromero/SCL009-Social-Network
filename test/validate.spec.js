@@ -1,4 +1,4 @@
-import {validateRegister} from './../src/assets/js/auth.js'
+import {validateRegister, validateSignIn} from './../src/assets/js/validation.js'
 
 describe ('validateRegister',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña', () =>{
@@ -15,7 +15,6 @@ describe ('validateRegister',()=>{
 })
 })
 
-import {validateSignIn} from './../src/assets/js/auth.js'
 describe ('validateSignIn',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
         expect(validateSignIn("","")).toBe(false);

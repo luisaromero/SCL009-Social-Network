@@ -1,5 +1,5 @@
 body{
-    background-image:url('http://wintablet.info/wp-content/uploads/2017/01/10f181fe73f9b5a7ee0be9eaac388562_mca-partners-with-growing-plant-growing-clipart_1917-1002.jpeg');
+    background-image:url('./img/fondo.jpeg');
     background-size: cover;
     position: relative;
     height:100vh;
@@ -78,7 +78,7 @@ color:white;
     align-items: center;
     justify-content: space-around;    
 }
-.enviarAtras{
+.send_back{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     display: -webkit-flex;/*prefijos necesarios*/
     display: -ms-flexbox;/*prefijos necesarios*/
@@ -94,7 +94,7 @@ color:white;
     justify-content: space-between;
     background-color: #aac705; 
 }
-#back{
+#btnBack{
     width: 60px;
     height: 43px;
     background:transparent;
@@ -104,7 +104,7 @@ color:white;
     border: none;
     margin-top: 10px;
 }
-.btn1{
+#btnSend{
     color: white;
     width: 225px;
     height: 36px;

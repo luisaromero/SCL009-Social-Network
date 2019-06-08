@@ -1,5 +1,5 @@
 
-import { cerrar,observador} from '../js/sign.js';
+import {signOff,observer} from '../js/auth.js';
 
 export const templateWall =() => {
     let user = firebase.auth().currentUser;
@@ -15,16 +15,16 @@ document.getElementById( "conteinerHead").innerHTML= `
   document.getElementById('root').innerHTML = `
   <div class= "container">
    <p>aqui va lo de la denis</p>
-   <button id="back" ></button>
-   <button id="close" class= "btn" >cierra sesión</button>
+   <button id="btnBack" ></button>
+   <button id="btnClose" class= "btn" >cierra sesión</button>
    </div>
   `
-document.getElementById('close').addEventListener('click', () => {
-cerrar();
+document.getElementById('btnClose').addEventListener('click', () => {
+signOff();
 window.location.hash = '#/inicio';
 
 })
-document.getElementById('back').addEventListener('click', () => {
+document.getElementById('btnBack').addEventListener('click', () => {
 window.location.hash = '#/inicio';})
 }
 }

@@ -1,10 +1,9 @@
 //Pantalla de registro de usuario
 import { templateStart } from './templateStart.js';
-import {verificar} from '../js/sign.js'
-import {btnEnviar} from '../js/sign.js'
-import {validateRegister} from '../js/auth.js'
-import {templateSignIn} from './templateSignIn.js'
-verificar();
+import {check,register} from '../js/auth.js'
+import {validateRegister} from '../js/validation.js'
+import {templateLogIn} from './templateLogIn.js'
+check();
 
 export const templateRegister = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -19,32 +18,32 @@ export const templateRegister = () => {
       <p id ="invalid"><p>
       <input id= "password" type="password" placeholder="Ingresa tu contraseña">
       <p id="invalidpassword"></p>
-      <div class="enviarAtras">
-      <button id="send" class="btn1" >Enviar</button>
-      <button id="back" type="button"></button>
+      <div class="send_back">
+      <button id="btnSend" >Enviar</button>
+      <button id="btnBack" type="button"></button>
       </div>
       </div>
       `
-  document.getElementById('send').addEventListener('click', () => {
+  document.getElementById('btnSend').addEventListener('click', () => {
   document.getElementById('invalid').innerHTML="";
   document.getElementById('invalidpassword').innerHTML="";
       let emailUser= document.getElementById("email").value;
       let  passwordUser=document.getElementById("password").value;
-      let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-      let verif=validateRegister(emailUser , passwordUser);
-        if (!regular.test(emailUser)){
+      let regEx =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+      let verify=validateRegister(emailUser , passwordUser);
+        if (!regEx.test(emailUser)){
            document.getElementById("invalid").innerHTML="Ingresa email valido"
            }
        if (passwordUser.length <=6){
           document.getElementById("invalidpassword").innerHTML="Ingresa contraseña mayor a 6 digitos"
           } 
-       if(verif=== true) { 
-           btnEnviar(emailUser , passwordUser);
+       if(verify=== true) { 
+           register(emailUser , passwordUser);
            Swal.fire("Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación" , "success")
-           templateSignIn();
+           templateLogIn();
            window.location.hash = '#/entrar'
            }})
-  document.getElementById('back').addEventListener('click', () => {
+  document.getElementById('btnBack').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
     // cambiar el hash a #/inicio
     templateStart();

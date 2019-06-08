@@ -1,7 +1,7 @@
 import { templateStart } from './assets/views/templateStart.js';
 import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
-import { templateSignIn } from './assets/views/templateSignIn.js';
+import { templateLogIn } from './assets/views/templateLogIn.js';
 import { templateWall } from './assets/views/templateWall.js';
 
 const changeRoute = (hash) => {
@@ -30,7 +30,7 @@ const showTemplate = (hash) => {
       templateStart();
       break;
       case 'entrar':
-      templateSignIn();
+      templateLogIn();
       break;
     case '':
       templateStart();
