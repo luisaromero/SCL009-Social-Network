@@ -18,15 +18,13 @@ export function btnEnviar(a,b) {
         console.log(errorMessage);
     //alert(errorCode);
     //alert(errorMessage);
-        // ...
       });
-}
+   }
 //ingreso de usuariess registrades con firebase
 //export function ingresar(){
 //-----------------INGRESO USUARIO REGISTRADO ------------------
-export function btnIngresar(email2, password2){
-  firebase.auth().signInWithEmailAndPassword(email2, password2)
-
+export function btnIngresar(a,b){
+  firebase.auth().signInWithEmailAndPassword(a,b)
   .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;

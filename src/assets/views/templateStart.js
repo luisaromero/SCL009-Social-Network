@@ -20,7 +20,7 @@ export const templateStart = () => {
     <button id="inicia" class="btn">Inicia sesión</button>
     <h2>O</h2>
     <button id="registrate" class="btn">Registrate</button>
-    <button id="google">Acceder con Google</button>
+    <button id="btnGoogle">Acceder con Google</button>
     `
     
   document.getElementById('registrate').addEventListener('click', () => {
@@ -36,7 +36,7 @@ export const templateStart = () => {
       templateSignIn();
       window.location.hash = '#/entrar';
 })
-document.getElementById('google').addEventListener('click', () => {
+document.getElementById('btnGoogle').addEventListener('click', () => {
   validateGoogle();
   window.location.hash = '#/muro'
 })
