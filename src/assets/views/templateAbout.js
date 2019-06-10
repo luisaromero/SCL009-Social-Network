@@ -22,6 +22,5 @@ export const templateAbout =() => {
      </div>
     `
     document.getElementById('btnBack').addEventListener('click', () => {
-        templateStart();
-        window.location.hash = '#/inicio';
+        window.location.hash = '#/start';
 })}

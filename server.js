@@ -9,5 +9,5 @@ app.get('/',function(request, response){
 
 
 app.listen(8000, function(){
-  console.log('Server Express Ready!');
+  console.log('Servidor funcionando en el puerto 8000');
 });
