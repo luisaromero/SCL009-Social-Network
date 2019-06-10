@@ -18,10 +18,10 @@ export const templateAbout =() => {
       ¡Mejoremos la vida a través de la tierra!
       <br>
       <br>¡Unete a nuestra red de huerteros!</p>
-     <button id="atras" ></button>
+     <button id="btnBack" ></button>
      </div>
     `
-    document.getElementById('atras').addEventListener('click', () => {
+    document.getElementById('btnBack').addEventListener('click', () => {
         templateStart();
         window.location.hash = '#/inicio';
 })}

@@ -1,10 +1,10 @@
 
 import { templateStart } from './templateStart.js';
-import {verificar} from '../js/sign.js'
-import {btnEnviar} from '../js/sign.js'
-import {validateRegister} from '../js/auth.js'
-import {templateSignIn} from './templateSignIn.js'
-verificar();
+import {verifyAccount} from '../js/auth.js'
+import {registerUser} from '../js/auth.js'
+import {validateRegister} from '../../test/validation.js'
+import {templateLogIn} from './templateLogIn.js'
+verifyAccount();
 
 export const templateRegister = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -13,23 +13,26 @@ export const templateRegister = () => {
   </div>
   `
   document.getElementById('root').innerHTML = `
-  <div class="contenedor">
+  <div class="container">
   <h4>Registrate</h4>
-  <input id="mail" type="text" placeholder="Ingresa tu correo">
-  <p id ="invalid"><p>
-  <input id= "contraseña" type="password" placeholder="Ingresa tu contraseña">
+  <input id="name" type="text" placeholder="Ingresa tu nombre">
+  <input id="email" type="email" placeholder="Ingresa tu correo">
+  <p id="invalid"></p>
+  <input id="password" type="password" placeholder="Ingresa tu contraseña">
   <p id="invalidpassword"></p>
-  <div class="enviarAtras">
-  <button id="enviar" class="btn1" >Enviar</button>
-  <button id="atras" type="button"></button>
+  <progress value="0" max="100" id="uploader">0%</progress>
+  <input type="file" value="upload" id="profilePhoto" />
+  <input type="hidden" value="" id="profilePhotoName" />
+  <div class="send_back">
+     <button id="btnSend" type="button">Enviar</button>
+     <button id="btnBack" type="button"></button>
   </div>
-  </div>
-  `
-    document.getElementById('enviar').addEventListener('click', () => {
+</div> `
+    document.getElementById('btnSend').addEventListener('click', () => {
       document.getElementById('invalid').innerHTML="";
       document.getElementById('invalidpassword').innerHTML="";
       let email= document.getElementById("mail").value;
-       let  password=document.getElementById("contraseña").value;
+       let  password=document.getElementById("password").value;
        let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
        let verif=validateRegister(email , password);
        if (!regular.test(email)){
@@ -40,12 +43,12 @@ export const templateRegister = () => {
        } 
     
        if(verif=== true) { 
-           btnEnviar(email, password,name);
+        registerUser(name, email, password, profilePhoto);
            swal('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
-           templateSignIn();
+           templateLogIn();
            window.location.hash = '#/entrar'
      } })
-  document.getElementById('atras').addEventListener('click', () => {
+  document.getElementById('btnBack').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
     // cambiar el hash a #/inicio
     templateStart();
