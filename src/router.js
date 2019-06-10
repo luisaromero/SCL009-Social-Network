@@ -5,9 +5,9 @@ import { templateLogIn } from './assets/views/templateLogIn.js';
 import { templateWall } from './assets/views/templateWall.js';
 
 const changeRoute = (hash) => {
-  if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/muro'|| hash === '' || hash === '#/' || hash === '/#') {
-    return showTemplate(hash)
-  }
+  // if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/wall'|| hash === '' || hash === '#/' || hash === '/#') {
+  //   return showTemplate(hash)
+  // }
   return showTemplate(hash)
 }
 
@@ -20,22 +20,22 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    case 'registrate':
-      templateRegister();
+    case 'register':
+     templateRegister();  
       break;
     case 'about':
       templateAbout();
       break;
-    case 'inicio':
+    case 'start':
       templateStart();
       break;
-      case 'entrar':
+      case 'logIn':
       templateLogIn();
       break;
     case '':
       templateStart();
       break;
-      case 'muro':
+      case 'wall':
         templateWall();
         break;
     default:
@@ -50,6 +50,7 @@ export const initRouter = () => {
   // si encuentra un cambio en el hash lo vuelve a sacar y pasar como parámetro a changeRoute
   if ('onhashchange' in window) {
     window.onhashchange = () => {
+      console.log("llamaron al router" + window.location.hash );
       changeRoute(window.location.hash);
     }
   }
