@@ -166,7 +166,7 @@ export const validateGoogle = () => {
           let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           uploader.value = percentage;
         },
-        function error(err) {
+        function error(err) {l
         },
         function complete() {
         }
