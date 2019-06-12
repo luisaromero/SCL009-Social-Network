@@ -47,7 +47,6 @@ export function registerUser (name, email, password, profilePhoto) {
 export function logIn(email2, password2){
 console.log("holados");
 firebase.auth().signInWithEmailAndPassword(email2, password2)
-
 .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -75,7 +74,6 @@ verifyAccount();
 
 
 export function observer(){
-
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -155,7 +153,7 @@ firebase.auth().signInWithPopup(provider)
   // ...
 });
 }
-  
+  /*
 //----------Imagen de perfil-------------------
     // Vigilar selección archivo
     export const upLoadProfilePhoto  = (e, uploader) => {
@@ -176,4 +174,4 @@ firebase.auth().signInWithPopup(provider)
         function complete() {
         }
         )
-    };
+    };*/

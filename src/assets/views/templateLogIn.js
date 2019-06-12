@@ -23,10 +23,10 @@ export const templateLogIn =() => {
      console.log("hola");      
         let email2= document.getElementById("email2").value;
         let password2=document.getElementById("password2").value; 
-        observer();
-        logIn(email2,password2);
         validateEs(email2,password2);
-       
-       
-})
-}
+        logIn(email2,password2)
+        if (observer===true) {
+                     window.location.hash = '#/muro';
+                     }
+                  })
+                }

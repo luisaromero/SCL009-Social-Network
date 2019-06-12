@@ -3,6 +3,9 @@ import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
 import { templateLogIn } from './assets/views/templateLogIn.js';
 import { templateWall } from './assets/views/templateWall.js';
+import { observer } from './assets/js/auth.js'
+
+
 
 
 const changeRoute = (hash) => {
@@ -37,6 +40,7 @@ const showTemplate = (hash) => {
       templateStart();
       break;
       case 'muro':
+        observer()
         templateWall();
         break;
     default:

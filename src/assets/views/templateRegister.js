@@ -20,9 +20,6 @@ export const templateRegister = () => {
   <p id="invalid"></p>
   <input id="password" type="password" placeholder="Ingresa tu contraseña">
   <p id="invalidpassword"></p>
-  <progress value="0" max="100" id="uploader">0%</progress>
-  <input type="file" value="upload" id="profilePhoto" />
-  <input type="hidden" value="" id="profilePhotoName" />
   <div class="send_back">
      <button id="btnSend" type="button">Enviar</button>
      <button id="btnBack" type="button"></button>
@@ -31,7 +28,7 @@ export const templateRegister = () => {
     document.getElementById('btnSend').addEventListener('click', () => {
       document.getElementById('invalid').innerHTML="";
       document.getElementById('invalidpassword').innerHTML="";
-      let email= document.getElementById("mail").value;
+      let email= document.getElementById("email").value;
        let  password=document.getElementById("password").value;
        let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
        let verif=validateRegister(email , password);
@@ -43,8 +40,8 @@ export const templateRegister = () => {
        } 
     
        if(verif=== true) { 
-        registerUser(name, email, password, profilePhoto);
-           swal('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
+        registerUser(name, email, password);
+           Swal.fire('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
            templateLogIn();
            window.location.hash = '#/entrar'
      } })
