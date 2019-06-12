@@ -31,6 +31,14 @@ describe ('validateSignIn',()=>{
             
 })
 })
+describe ('validateWall',()=>{
+    it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
+        expect(validateWall("")).toBe(false);
+    })
+   it ('deberia retornar true si es que ingresa correo y contraseña registrado', () =>{
+            expect(validateWall("estesmimail")).toBe(true);
+   })
+})
 // describe ('validateEs',()=>{
 //     it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
 //         expect(validateEs("","")).toBe(false);
