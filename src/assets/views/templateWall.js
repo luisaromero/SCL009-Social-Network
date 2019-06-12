@@ -1,7 +1,24 @@
 import {} from "../js/firebaseInit.js";
 import { closeSesion} from '../js/auth.js';
-import { createPostFb} from './../js/firestoreWall.js';
+import { readPostFb} from './../js/firestoreWall.js';
+import {createPostFb} from './../js/firestoreWall.js';
 
+
+
+export function postPrint(doc) {
+  document.getElementById("containerWallPost").innerHTML+=
+  ` <div  id="myModal" class= "contenedor">
+
+  <textarea name="answer" id="toPost" class="comentPost" cols="30" rows="10">${doc.data().descripcion}</textarea>
+<div class="btnComent">
+  <button id="coment" type="button" class="btnPost" >comentar</button>
+  <button id="clearPost" type="button" class="btnPost" >Eliminar</button>
+ </div>
+</div>
+      `
+
+  
+}
 export const templateWall =() => {
 document.getElementById( "conteinerHead").innerHTML= ` 
 <div class= "conteinerH">
@@ -10,29 +27,36 @@ document.getElementById( "conteinerHead").innerHTML= `
 `
   document.getElementById('root').innerHTML = `
   <div  id="myModal" class= "contenedor">
-  
-        <textarea name="toPost" id="toPost" class="toPost" cols="30" rows="10" placeholder="¿Qué  estás pensando?"></textarea>
+  <div id="user"></div>
+        <textarea name="toPost" id="toPost" class="toPost" cols="30" rows="10" placeholder="¿Qué  está pasando con tu huerta?"></textarea>
       
  
       <button id="createPost" type="button" class="btnPost" >Publicar</button>
+      
+     
      
       
    <button id="btnClose" class= "btn" >cierra sesión</button>
    </div>  
    </div>
    <div  id="containerWallPost" >
+   
 
    </div>
    `
 
- 
+   readPostFb()//llamando esat funcion se muetsarn los post que ya estan en la pagina al cargarla
   document.getElementById('createPost').addEventListener('click', () => {
     let publish= document.getElementById("toPost").value
  console.log(publish);
     console.log("btn publicar funciona");
-    createPostFb (publish)
+    if(publish.length >=1) {
+      createPostFb(publish)
+    }
+    
     
   })
+ 
 
   
 
@@ -41,24 +65,8 @@ document.getElementById('btnClose').addEventListener('click', () => {
 window.location.hash = '#/inicio';
 
 })
-
 }
 
-
-export function postPrint(doc) {
-  document.getElementById("containerWallPost").innerHTML+=
-  ` <div  id="myModal" class= "contenedor">
-
-  <textarea name="answer" id="toPost" class="toPost" cols="30" rows="10">${doc.data().descripcion}</textarea>
-
-  <button id="coment" type="button" class="btnPost" >comentar</button>
-     
-
-</div>
-      `
-
-  
-}
 
 
  

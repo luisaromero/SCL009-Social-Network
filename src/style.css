@@ -99,6 +99,19 @@ color:white;
     margin-top: 10px;
     
 }
+.btnComent{
+    display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
+    display: -webkit-flex;/*prefijos necesarios*/
+    display: -ms-flexbox;/*prefijos necesarios*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+   
+    margin-right: 5px;
+    
+
+}
 .send_back{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
     display: -webkit-flex;/*prefijos necesarios*/
@@ -164,12 +177,20 @@ color:white;
 }
 .btnPost{
     color: white;
-    width: 100px;
-    height: 30px;
-    font-size:17px;
+    width: 80px;
+    height: 20px;
+    font-size:10px;
    margin-top: 10px;
-    background: rgba(22, 73, 27, 0.98);
+    background: rgba(41, 12, 1, 0.877);
     border-radius:7px;
     font-weight: bold;
    
+}
+.toPost{
+
+    background-color: #b3fab7;
+}
+.comentPost{
+    background-color: #fad3b3;
+
 }

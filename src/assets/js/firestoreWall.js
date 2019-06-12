@@ -33,10 +33,13 @@ db.collection("posts").add({//aqui es donde quedan guardados los post
 //leer el post, lo muestre en el muro
 
 export const readPostFb = () => {
+   
     console.log("estoy dentro del read");
-    containerWallPost.innerHTML = '';
+    //toPost.innerHTML = '';
     let db = firebase.firestore();
-    db.collection("posts").get().then((querySnapshot) => { 
+    db.collection("posts").get().then((querySnapshot) => {
+        var citiesRef = db.collection("descripcion"); 
+        citiesRef.orderBy("name", "desc").limit(2);
 
    //     if(document.getElementById("containerWallPost")){
     //     document.getElementById("containerWallPost").innerHTML="";
@@ -48,5 +51,6 @@ export const readPostFb = () => {
 
            })
            })
-}               
+}   
+    
     
