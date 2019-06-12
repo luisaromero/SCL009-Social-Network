@@ -21,8 +21,6 @@ export function registerUser (name, email, password, profilePhoto) {
         displayName: name,
         photoURL: profilePhoto
      
-      }).then (function (){
-        console.log(user);
       })
       })
   })
@@ -95,7 +93,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     
   }
    else {
-    window.location.hash = '#/inicio';
+    window.location.hash = '#/inicio'; 
+    //window.location.hash = '#/inicio';
     console.log("no existe usuario activo")
 
     // User is signed out.

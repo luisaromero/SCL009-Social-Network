@@ -7,6 +7,7 @@ import { observer } from './assets/js/auth.js'
 
 
 
+
 const changeRoute = (hash) => {
   if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/muro'|| hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
