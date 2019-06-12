@@ -1,8 +1,12 @@
 import { templateStart } from './assets/views/templateStart.js';
 import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
-import { templateSignIn } from './assets/views/templateSignIn.js';
+import { templateLogIn } from './assets/views/templateLogIn.js';
 import { templateWall } from './assets/views/templateWall.js';
+import { observer } from './assets/js/auth.js'
+
+
+
 
 const changeRoute = (hash) => {
   if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/muro'|| hash === '' || hash === '#/' || hash === '/#') {
@@ -30,12 +34,13 @@ const showTemplate = (hash) => {
       templateStart();
       break;
       case 'entrar':
-      templateSignIn();
+      templateLogIn();
       break;
     case '':
       templateStart();
       break;
       case 'muro':
+        observer()
         templateWall();
         break;
     default:
@@ -44,12 +49,15 @@ const showTemplate = (hash) => {
 }
 
 export const initRouter = () => {
+
+
   // cuando la ventana se carga saca el hash y se lo pasa a changeRoute
   window.addEventListener('load', changeRoute(window.location.hash));
-
+  
   // si encuentra un cambio en el hash lo vuelve a sacar y pasar como parámetro a changeRoute
   if ('onhashchange' in window) {
     window.onhashchange = () => {
+      
       changeRoute(window.location.hash);
     }
   }

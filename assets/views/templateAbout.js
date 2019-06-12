@@ -8,7 +8,7 @@ export const templateAbout =() => {
   </div>
   `
     document.getElementById('root').innerHTML = `
-    <div class="aboutUs">
+    <div class="somos">
     <div class="img"> 
     </div>
      <p>Somos un lugar de encuentro entre humanes y su relación con la tierra, donde podras compartir la experiencia,  podras preguntar
@@ -18,10 +18,10 @@ export const templateAbout =() => {
       ¡Mejoremos la vida a través de la tierra!
       <br>
       <br>¡Unete a nuestra red de huerteros!</p>
-     <button id="back" ></button>
+     <button id="btnBack" ></button>
      </div>
     `
-    document.getElementById('back').addEventListener('click', () => {
+    document.getElementById('btnBack').addEventListener('click', () => {
         templateStart();
         window.location.hash = '#/inicio';
 })}
