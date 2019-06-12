@@ -1,6 +1,9 @@
 import { templateStart } from './templateStart.js'
 
 
+
+
+
 export const templateAbout =() => {
   document.getElementById( "conteinerHead").innerHTML= ` 
   <div class= "conteinerH">

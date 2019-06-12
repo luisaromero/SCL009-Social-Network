@@ -1,0 +1,494 @@
+[33mcommit 131d93848d6eaa18362170b836ba201dd2c80d75[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Mon Jun 10 03:49:04 2019 -0400
+
+    Optimizando codigo
+
+[33mcommit 5fe47968a07e78d8fce8fb6ccacba63347090357[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 8 18:43:02 2019 -0400
+
+    cambiando id de español a ingles y ordenando codigo
+
+[33mcommit 613d14dcbd799f26c7344d7eae74cbc2324f76f9[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 8 02:09:22 2019 -0400
+
+    cambiando algunos id's de es a en
+
+[33mcommit 6c1b0963c88ff4e3db5da505b7c67a146d2f0f3c[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 8 00:00:12 2019 -0400
+
+    ordenando y limpiando un poco el codigo
+
+[33mcommit d4ba5694d7ae6c5900844c03cf0d77bb4cb44eec[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri Jun 7 17:00:33 2019 -0400
+
+    usuario contraseña inv en sign in mensaje
+
+[33mcommit 1e1984acd7f41178773bf5d6746a1d55d9255306[m
+Merge: 37117b9 f157a73
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Fri Jun 7 16:42:02 2019 -0400
+
+    Merge pull request #10 from javie-lau/master
+    
+    google validacion merge
+
+[33mcommit f157a73c48f0ec52850e4f07fda6b4116923b4e2[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri Jun 7 16:34:36 2019 -0400
+
+    google validacion
+
+[33mcommit 37117b97fecf6bd7c5a7123c988ef508e3beaa52[m
+Merge: fdd69fd b08ea8a
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Fri Jun 7 16:05:36 2019 -0400
+
+    Merge pull request #9 from javie-lau/master
+    
+    merge logo
+
+[33mcommit b08ea8ab955e0dd7b9cb01dd2652421087fd27ad[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri Jun 7 15:59:54 2019 -0400
+
+    logo n
+
+[33mcommit fdd69fd48340f25a60638c5c3852c9296300cbb9[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri Jun 7 02:25:11 2019 -0400
+
+    actualizando lo anterior
+
+[33mcommit 4cd6e621387ef70f2969bf77aa1f2cf1d69232b8[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri Jun 7 01:35:14 2019 -0400
+
+    no dejar entrar a muro a usuario no registrado y lo contrario funcionando ok!
+
+[33mcommit dfbbc529990953588b16e357b126eb6c5a16474a[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Thu Jun 6 18:12:23 2019 -0400
+
+    cambiando about
+
+[33mcommit 5b6b5fdb18961ffdf1d38c864b54276bfb420ed7[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Thu Jun 6 17:30:10 2019 -0400
+
+    arreglando errores y redirigiendo a usuarios activos y no activos
+
+[33mcommit 0c202357bb6201caafdd14d90b641606ee282b61[m
+Merge: c55c06f 48c8397
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Thu Jun 6 16:21:01 2019 -0400
+
+    Merge pull request #8 from javie-lau/master
+    
+    primera historia de usuario
+
+[33mcommit 48c8397bf7817383dfbff5e054ceb8de18c88931[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Thu Jun 6 16:19:26 2019 -0400
+
+    primera historia de usuario
+
+[33mcommit c55c06f09f062f05fcfafeb0aaedb43cdaf1da2b[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Thu Jun 6 02:37:48 2019 -0400
+
+    subiendo test para ingresar
+
+[33mcommit 72ce70e176b0e053ab9463e34d6642cbd877ce40[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Thu Jun 6 01:20:59 2019 -0400
+
+    template ingresar y con ingreso de usuario listo
+
+[33mcommit 3d366f403e92adfdc9a41936dfaed7d98dcb8fa6[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Wed Jun 5 23:42:52 2019 -0400
+
+    agregando algo que se habia borrado y detalles
+
+[33mcommit dd9041dd828911fcbf7793b2a5a1629268ac3d5f[m
+Merge: a9b5470 ff352a9
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Wed Jun 5 18:15:03 2019 -0400
+
+    Merge pull request #7 from javie-lau/master
+    
+    boton merge
+
+[33mcommit ff352a9f529c0a8ff644cc55eebe544e4589caae[m
+Merge: cebd94a a9b5470
+Author: lau <laura.javiera77@gmail.com>
+Date:   Wed Jun 5 18:11:24 2019 -0400
+
+    con botones y test
+
+[33mcommit cebd94afe410d63303026ac5b8e04bd353cdff28[m
+Merge: 5cdc697 f597fae
+Author: lau <laura.javiera77@gmail.com>
+Date:   Wed Jun 5 17:39:16 2019 -0400
+
+    cambios test
+
+[33mcommit a9b5470319072e3e7c993c0c00da03330888cdf1[m
+Merge: 7c2ea60 2e6a034
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Wed Jun 5 17:34:59 2019 -0400
+
+    Merge pull request #6 from javie-lau/master
+    
+    merge
+
+[33mcommit 2e6a034828b46e32a5e104b67c59a1f007220acb[m
+Merge: 5cdc697 7c2ea60
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Wed Jun 5 17:34:14 2019 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit 7c2ea602040cc65fea386ff81aaec8b19d03c166[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Wed Jun 5 17:16:40 2019 -0400
+
+    estilos al css
+
+[33mcommit fad34366f4dda7d648f372c7a9bc336fd370d6ea[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Wed Jun 5 14:03:25 2019 -0400
+
+    subiendo if
+
+[33mcommit 44903eca8a7a7a82fa448dad19886b194763e588[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Wed Jun 5 13:57:20 2019 -0400
+
+    subiendo boton atras
+
+[33mcommit f597faea58adc786cfdfda9c035c3415d3f094cb[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 23:22:31 2019 -0400
+
+    ahora si funcionan los test sin ningun error , listos git add .
+
+[33mcommit 1c9f50a6c73e3b68592993c6ab8070dd6f73f9bd[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 22:40:07 2019 -0400
+
+    test ok listos 100% de cobertura
+
+[33mcommit 602de59d1702518a27477e0352026a496e34ae3f[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 17:32:52 2019 -0400
+
+    arreglando ifs y validacion , funcionando
+
+[33mcommit ae8bb391f5d467ce4a9a8916fcda4e5348aac6eb[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 16:38:59 2019 -0400
+
+    agregando if para correo y contraseña invalido
+
+[33mcommit 5cdc697ad76b2af016b004aedda03e67005ea617[m
+Merge: cee48b7 868f057
+Author: lau <laura.javiera77@gmail.com>
+Date:   Tue Jun 4 12:05:20 2019 -0400
+
+    cambios en css
+
+[33mcommit 868f057448d3de3ba8f15c1c20e28f0003bdc889[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 00:39:03 2019 -0400
+
+    agregando funcion registrar y enviar registro
+
+[33mcommit 2a339e931e5020a57376db7777cb1363a0dedab2[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Tue Jun 4 00:00:54 2019 -0400
+
+    agregando template about y boton about con css provisorio
+
+[33mcommit 9f15409b23cdd71c0877082c0fa0c858bf8cab84[m
+Merge: 0e3497e 277f052
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Mon Jun 3 18:15:59 2019 -0400
+
+    Merge branch 'javie-lau-master'
+
+[33mcommit 277f052ba903bce08cbcd2336b47f1dc826e9f60[m
+Merge: 0e3497e 32f0222
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Mon Jun 3 18:15:02 2019 -0400
+
+    solucionando conflictos
+
+[33mcommit cee48b7979814221307c06aceebfdf2ad61562dd[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Mon Jun 3 18:06:36 2019 -0400
+
+    registro funcionando
+
+[33mcommit 32f02222932808eb3d2e7b0efd9dfd80e557bb63[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Mon Jun 3 17:21:39 2019 -0400
+
+    con funciones
+
+[33mcommit 0e3497e6d6c82004966d91b278f6f6da460d65ae[m
+Merge: b8d2a91 9e622f4
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Mon Jun 3 16:55:49 2019 -0400
+
+    Merge pull request #4 from DenisseFerreira/master
+    
+    Historia de usuario ordenadas y priorizadas
+
+[33mcommit b8d2a9100acc6b075c3f45af977c0249ea3b3c21[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Mon Jun 3 16:50:49 2019 -0400
+
+    actualizando nombres de templates
+
+[33mcommit 9e622f49f581680565114846a110fe66e21cb316[m
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Mon Jun 3 15:02:03 2019 -0400
+
+    Historia de usuario priorizadas
+
+[33mcommit aa4ae17e202d741a4ae988226e5e2634c1558bf5[m
+Merge: 8f77c92 837ac0b
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Mon Jun 3 14:33:17 2019 -0400
+
+    archivos eliminados
+
+[33mcommit 547a5a3419c22540ac5467312097ae4f6b543fe7[m
+Merge: 2ce86a1 837ac0b
+Author: lau <laura.javiera77@gmail.com>
+Date:   Mon Jun 3 14:26:14 2019 -0400
+
+    Merge branch 'master' of https://github.com/luisaromero/SCL009-Social-Network
+
+[33mcommit 8f77c924b513001ec7516e47507bb53070797fb1[m
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Mon Jun 3 14:25:14 2019 -0400
+
+    Historias de usuario
+
+[33mcommit 837ac0b7626afc57e17dd2a2e9e2e43ea8913a48[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Mon Jun 3 14:23:23 2019 -0400
+
+    agregando funcion observador
+
+[33mcommit cac87c50e22453ee2511abbc4e79dd5d32de2adf[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sun Jun 2 14:16:59 2019 -0400
+
+    detalles a las letras
+
+[33mcommit 2ce86a1d5f0a27a7e309be13bdac20532e1a26da[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Sun Jun 2 10:45:26 2019 -0400
+
+    prueba html y style initial
+
+[33mcommit b9447bbd92dcb0fff0007c55e71068b2bae83359[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Sun Jun 2 08:56:09 2019 -0400
+
+    probando con un nuevo html
+
+[33mcommit 5802dfd798c4d86376eb6e998d3559831d10a56a[m
+Merge: 8b550f1 e12dd8e
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Sat Jun 1 23:55:17 2019 -0400
+
+    Agregado json, SPA y firebase
+
+[33mcommit 8b550f1d9295132b4be6f72d29156487aa8d6b0b[m
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Sat Jun 1 23:50:50 2019 -0400
+
+    arreglando json
+
+[33mcommit e12dd8ef538eaee81b4915d57fcc2d82af24365b[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 23:26:36 2019 -0400
+
+    agreguè otra app.js para firebase
+
+[33mcommit f8f4cad77c48424b40d84f49f7b84b0bd57d235d[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 22:57:20 2019 -0400
+
+    detalles al css
+
+[33mcommit 9dcc11abc719d2c24f0cdc6780d06d9f6b30e1e5[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 22:16:32 2019 -0400
+
+    SPA , hash funcionando para primera historia de usuario
+
+[33mcommit f47d00c5c2a355bfa2d391ab4a4239c3a5180c28[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 03:05:26 2019 -0400
+
+    detalles imagen
+
+[33mcommit ce646d70b860a06813090228d5e1532ff0bf0ccc[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 02:50:34 2019 -0400
+
+    creando boton acceder con google
+
+[33mcommit b59b74321aad48d8620227c1226b149d816b0d3b[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 01:42:05 2019 -0400
+
+    empezando con SPA , aun no funciona
+
+[33mcommit 443121472d0b61d2678cf34431a355fabf01ac96[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 00:38:14 2019 -0400
+
+    agregando estilos a las pantallas provisorios
+
+[33mcommit b28a85da170028abec0f3f9aecf745b86cfd673e[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Sat Jun 1 00:15:17 2019 -0400
+
+    arreglando botones
+
+[33mcommit 9d63fd59514ed196d6b63ea7ac8fc61fd0661dec[m
+Merge: e32803f b9ebb2f
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Fri May 31 17:24:27 2019 -0400
+
+    Merge pull request #3 from javie-lau/master
+    
+    carpetas views
+
+[33mcommit b9ebb2f8fdf8aac02f38b9982297d1808e80fb37[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri May 31 17:22:24 2019 -0400
+
+    views
+
+[33mcommit 005e023be18f9ada96a1433ae68df38b970dc134[m
+Merge: 18c4cc8 8fc5a68
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri May 31 17:17:10 2019 -0400
+
+    Merge branch 'master' of https://github.com/javie-lau/SCL009-Social-Network
+
+[33mcommit e32803f85f47c1838f5314f1507728fa83015682[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri May 31 17:16:03 2019 -0400
+
+    agregando divs
+
+[33mcommit 18c4cc8c72f8abacb7389ca25f9ea735e9f9d363[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri May 31 17:14:12 2019 -0400
+
+    carpeta view
+
+[33mcommit b9fac5dd20280a0950e7fbc0bb63461b7148e886[m
+Merge: 6c3a9d9 8fc5a68
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Fri May 31 15:56:56 2019 -0400
+
+    Merge pull request #2 from javie-lau/master
+    
+    mas limpio
+
+[33mcommit 8fc5a68d123e9539c4ba8279a919244b44f66a32[m
+Merge: 4f8cdda 6c3a9d9
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Fri May 31 15:55:07 2019 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit 6c3a9d9dbb911a4b80b848da02fdc093ca8f9d0b[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri May 31 15:51:07 2019 -0400
+
+    arreglos , botones
+
+[33mcommit 4f8cddaf3ed3e8a90a8b8ed711e4b0550e259914[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri May 31 15:48:44 2019 -0400
+
+    mas limpio
+
+[33mcommit c7e3ab7502ffa6bd035e1e95d6079d4472fd884a[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Fri May 31 15:45:14 2019 -0400
+
+    ingreso con problemas
+
+[33mcommit 3c1a125dfb21f7f46d88483187ca316fb055d17b[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri May 31 02:29:02 2019 -0400
+
+    primera pantalla
+
+[33mcommit d223d262215d83189795d90ee455bbab036880cc[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri May 31 01:53:37 2019 -0400
+
+    agregando pantalla de registro de usuario
+
+[33mcommit 39e024e370c543452d10b866257309504563605d[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Fri May 31 01:44:59 2019 -0400
+
+    primera historia de usuario, agregando estilos al css y primera y segunda pantalla
+
+[33mcommit 66d14dcceafcbb3b49ae623c089024ece40b6cc6[m
+Merge: fe31cc6 e44ed4e
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Thu May 30 23:00:06 2019 -0400
+
+    Merge pull request #1 from javie-lau/master
+    
+    primera idea
+
+[33mcommit e44ed4e661c9fc998291c1b0eb80d7839e003466[m
+Merge: 572744d fe31cc6
+Author: luisaromero <48934446+luisaromero@users.noreply.github.com>
+Date:   Thu May 30 22:59:41 2019 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit fe31cc6dbae7bbcfd27070e1385a31fd8d701c70[m
+Author: luisaromero <luisa.marcela.romero@gmail.com>
+Date:   Thu May 30 18:13:22 2019 -0400
+
+    boilerplate y funciones para registrarse con firebase
+
+[33mcommit 572744d8855b7943b0adbc6bd56a05d15cf2c826[m
+Author: lau <laura.javiera77@gmail.com>
+Date:   Thu May 30 18:11:13 2019 -0400
+
+    primera idea
+
+[33mcommit b53858314d2d317d2acb77aabbea944cceee85d9[m
+Author: DenisseFerreira <ferreira.denisse@gmail.com>
+Date:   Tue May 28 18:29:11 2019 -0400
+
+    Creando boileplace
+
+[33mcommit 53b27cb14b37a4c948f14241e17a02f20ea0810c[m
+Author: nerdale <alexandra.neira@gmail.com>
+Date:   Wed May 22 11:57:49 2019 -0400
+
+    first commit
