@@ -23,7 +23,7 @@ export function postPrint(doc) {
 
   
 }
-export const templateWall =() => {
+export function templateWall()  {
 document.getElementById( "conteinerHead").innerHTML= ` 
 <div class= "conteinerH">
 <img class="logo" src= "https://i.ibb.co/4J2DX8p/Whats-App-Image-2019-06-07-at-3-42-02-PM.jpg">

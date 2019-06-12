@@ -2,6 +2,7 @@ import {} from "./firebaseInit.js";
 import{postPrint} from '../views/templateWall.js'
 
 
+
 export const createPostFb = (publish)=>{//ponemos la variable que contiene el post
     let user = firebase.auth().currentUser; //trae la informacion del usuario que esta activo
 //agregar datos
@@ -19,6 +20,7 @@ db.collection("posts").add({//aqui es donde quedan guardados los post
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
     readPostFb();
+ 
 })
 .catch(function(error) {
     console.error("Error adding document: ", error);
@@ -46,6 +48,7 @@ export const readPostFb = () => {
       //  }
            querySnapshot.forEach((doc) => {
             postPrint(doc)
+            
     // -------------------ficha de comentarios----------------------                      
   
 
