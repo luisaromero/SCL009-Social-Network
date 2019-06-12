@@ -26,6 +26,10 @@ db.collection("posts").add({//aqui es donde quedan guardados los post
 
 }
 
+
+
+
+
 //leer el post, lo muestre en el muro
 
 export const readPostFb = () => {

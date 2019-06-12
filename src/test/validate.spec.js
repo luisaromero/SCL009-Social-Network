@@ -1,4 +1,4 @@
-import {validateRegister, validateSignIn} from './../src/assets/js/validation.js'
+import {validateRegister, validateSignIn} from './validation.js'
 
 describe ('validateRegister',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña', () =>{
@@ -31,4 +31,16 @@ describe ('validateSignIn',()=>{
             
 })
 })
-
+// describe ('validateEs',()=>{
+//     it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
+//         expect(validateEs("","")).toBe(false);
+//     })
+//    it ('deberia retornar false si es que ingresa correo invalido', () =>{
+//             expect(validateEs("esteesunammail@gmailcom")).toBe(false);
+  
+//     })
+//     it ('deberia retornar falso si ingresas una contraseña menor a 6 digitos', () =>{
+//         expect(validateSignIn("estesmimail@gmail.com","no")).toBe(false);
+            
+// })
+// })
