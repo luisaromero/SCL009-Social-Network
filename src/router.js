@@ -3,11 +3,14 @@ import { templateRegister } from './assets/views/templateRegister.js';
 import { templateAbout } from './assets/views/templateAbout.js';
 import { templateLogIn } from './assets/views/templateLogIn.js';
 import { templateWall } from './assets/views/templateWall.js';
+import { observer } from './assets/js/auth.js'
+
+
 
 const changeRoute = (hash) => {
-  // if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/wall'|| hash === '' || hash === '#/' || hash === '/#') {
-  //   return showTemplate(hash)
-  // }
+  if (hash === '#/registrate' || hash === '#/entrar' || hash === '#/inicio' ||  hash === '#/muro'|| hash === '' || hash === '#/' || hash === '/#') {
+    return showTemplate(hash)
+  }
   return showTemplate(hash)
 }
 
@@ -20,22 +23,23 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    case 'register':
-     templateRegister();  
+    case 'registrate':
+      templateRegister();
       break;
     case 'about':
       templateAbout();
       break;
-    case 'start':
+    case 'inicio':
       templateStart();
       break;
-      case 'logIn':
+      case 'entrar':
       templateLogIn();
       break;
     case '':
       templateStart();
       break;
-      case 'wall':
+      case 'muro':
+        observer()
         templateWall();
         break;
     default:
@@ -44,13 +48,15 @@ const showTemplate = (hash) => {
 }
 
 export const initRouter = () => {
+
+
   // cuando la ventana se carga saca el hash y se lo pasa a changeRoute
   window.addEventListener('load', changeRoute(window.location.hash));
-
+  
   // si encuentra un cambio en el hash lo vuelve a sacar y pasar como parámetro a changeRoute
   if ('onhashchange' in window) {
     window.onhashchange = () => {
-      console.log("llamaron al router" + window.location.hash );
+      
       changeRoute(window.location.hash);
     }
   }
