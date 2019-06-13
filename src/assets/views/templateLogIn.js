@@ -11,7 +11,7 @@ export const templateLogIn =() => {
   </div>
   `
     document.getElementById('root').innerHTML = `<div class="contenedor
-    ">
+    "
     <h4>Ingreso de usuaries</h4>
     <input id="email2" type="text" placeholder="Ingresa tu correo">
     <p id ="invalidEmail"><p>
@@ -26,6 +26,7 @@ export const templateLogIn =() => {
         validateEs(email2,password2);
         logIn(email2,password2)
         observer()
-        window.location.hash = '#/muro'
+        window.location.hash = '#/muro';
+                     
                   })
                 }
