@@ -6,33 +6,18 @@ let storage = firebase.storage(); //nueva
 let storageRef = storage.ref();
 //-------------REGISTRO DE USUARIO----------------
 
-export function registerUser (name, email, password, profilePhoto) {
-  let db = firebase.firestore();
-  db.collection("users").add({//aqui es donde quedan guardados los usuaries
-
-    usuario: user.email,
-    displayName: user.displayName,
-    password:password,
-    usuarioId:user.uid
-})
+export function registerUser (name, email, password) {
+  
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
    
-    let starsRef = storageRef.child('profilePhoto/' + profilePhoto);
-     // creo carpeta hijo para guardar las fotos del usuario
-     starsRef.getDownloadURL().then(function (url) { // rescato URL de la foto
-      profilePhoto = url; // guardo la URL en profilePhoto      
-      let user = firebase.auth().currentUser;//toma informacion del perfil del usuario
-      user.updateProfile({
-        //hace visible nomre y foto
-        displayName: name,
-        photoURL: profilePhoto
      
-      })
-      })
+    let user = firebase.auth().currentUser;
+    let uid = user.uid;
+      //console.log(uid);
+       //llamamos a saveUser cuando el usuario se registre
+       verifyAccount();
   })
-  
-
   .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -43,12 +28,9 @@ export function registerUser (name, email, password, profilePhoto) {
   //alert(errorCode);
   //alert(errorMessage);
       // ...
-    });
-    verifyAccount()
+    }); 
+   
 }
-//ingreso de usuariess registrades con firebase
-
-
 
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export function logIn(email2, password2){
@@ -89,6 +71,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
+
+    // userName.textContent = displayName;
+    // // userName.textContent = user.email;
+
+    // window.onload = function () {
+    // observer();
+    // }
   
     var emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
