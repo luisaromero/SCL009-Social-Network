@@ -1,4 +1,4 @@
-import {validateRegister, validateSignIn} from './validation.js'
+import {validateRegister, validateSignIn,validateWall} from './validation.js'
 
 describe ('validateRegister',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña', () =>{

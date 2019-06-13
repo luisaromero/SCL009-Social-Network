@@ -8,9 +8,13 @@ import {createPostFb} from './../js/firestoreWall.js';
 export function postPrint(doc) {
   document.getElementById("containerWallPost").innerHTML+=
   ` <div  id="myModal" class= "contenedor">
+<div class= "conteinerUser">
+<p>${doc.data().displayName}</p>
+<textarea name="answer" id="toPost" class="comentPost" cols="30" rows="10">${doc.data().descripcion}</textarea>
 
-  <textarea name="answer" id="toPost" class="comentPost" cols="30" rows="10">${doc.data().descripcion}</textarea>
+</div>
 <div class="btnComent">
+  
   <button id="coment" type="button" class="btnPost" >comentar</button>
   <button id="clearPost" type="button" class="btnPost" >Eliminar</button>
  </div>
@@ -19,10 +23,11 @@ export function postPrint(doc) {
 
   
 }
-export const templateWall =() => {
+export function templateWall()  {
 document.getElementById( "conteinerHead").innerHTML= ` 
 <div class= "conteinerH">
 <img class="logo" src= "https://i.ibb.co/4J2DX8p/Whats-App-Image-2019-06-07-at-3-42-02-PM.jpg">
+<button id="btnClose" class= "btnClose" >cierra sesión</button>
 </div>
 `
   document.getElementById('root').innerHTML = `
@@ -36,7 +41,7 @@ document.getElementById( "conteinerHead").innerHTML= `
      
      
       
-   <button id="btnClose" class= "btn" >cierra sesión</button>
+  
    </div>  
    </div>
    <div  id="containerWallPost" >

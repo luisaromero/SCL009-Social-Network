@@ -7,7 +7,14 @@ let storageRef = storage.ref();
 //-------------REGISTRO DE USUARIO----------------
 
 export function registerUser (name, email, password, profilePhoto) {
-  
+  let db = firebase.firestore();
+  db.collection("users").add({//aqui es donde quedan guardados los usuaries
+
+    usuario: user.email,
+    displayName: user.displayName,
+    password:password,
+    usuarioId:user.uid
+})
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
    
