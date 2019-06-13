@@ -12,7 +12,7 @@ const saveUsers = (name, email,uid,password) => {
   let db = firebase.firestore();
   db.collection("users").add({
     uid: uid,
-    name: name,
+    name: displayName,
     email: email,
      password:password
 
