@@ -4,7 +4,7 @@ import {verifyAccount} from '../js/auth.js'
 import {registerUser} from '../js/auth.js'
 import {validateRegister} from '../../test/validation.js'
 import {templateLogIn} from './templateLogIn.js'
-verifyAccount();
+
 
 export const templateRegister = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
