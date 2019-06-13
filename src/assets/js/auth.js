@@ -30,9 +30,6 @@ export function registerUser (name, email, password) {
     }); 
    
 }
-//ingreso de usuariess registrades con firebase
-
-
 
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export function logIn(email2, password2){
@@ -73,6 +70,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
+
+    // userName.textContent = displayName;
+    // // userName.textContent = user.email;
+
+    // window.onload = function () {
+    // observer();
+    // }
   
     var emailVerified = user.emailVerified;
     var photoURL = user.photoURL;

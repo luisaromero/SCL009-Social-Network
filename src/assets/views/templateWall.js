@@ -55,7 +55,7 @@ document.getElementById( "conteinerHead").innerHTML= `
     let publish= document.getElementById("toPost").value
  console.log(publish);
     console.log("btn publicar funciona");
-    if(publish.length >=1) {
+    if(publish.length >=1 && publish.length <=200) {
       createPostFb(publish)
     }
     
