@@ -10,11 +10,12 @@ let storageRef = storage.ref();
 // Guardar usuarios registrados en firestore
 const saveUsers = (name, email,uid,password) => {
   let db = firebase.firestore();
+  let user = firebase.auth().currentUser;//toma informacion del perfil del usuario
   db.collection("users").add({
-    uid: uid,
-    name: displayName,
-    email: email,
-     password:password
+    usuario: user.email,
+    displayName:name,
+    password:password,
+    usuarioId:user.uid
 
   })
     .then(function (docRef) {
@@ -28,18 +29,13 @@ const saveUsers = (name, email,uid,password) => {
 //-------------REGISTRO DE USUARIO----------------
 
 export function registerUser (name, email, password, profilePhoto) {
-  
+ 
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
-   
+    let user = firebase.auth().currentUser;//toma informacion del perfil del usuario 
+   let uid = user.uid;
+    saveUsers((name, email,uid,password)); 
      
-    let user = firebase.auth().currentUser;
-    let uid = user.uid;
-      //console.log(uid);
-      saveUsers(name,email,uid,password); //llamamos a saveUser cuando el usuario se registre
-      verifyAccount();
-   
-    
   })
   
 
@@ -55,6 +51,7 @@ export function registerUser (name, email, password, profilePhoto) {
       // ...
     });
    
+    verifyAccount()
 }
 //ingreso de usuariess registrades con firebase
 
@@ -121,6 +118,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
+
 //cerrar sesion
 export function closeSesion(){
 
@@ -141,7 +139,6 @@ export function validateGoogle(){
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider)
 .then(function(result) {
-  
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
   // The signed-in user info.
