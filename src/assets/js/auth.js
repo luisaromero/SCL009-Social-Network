@@ -4,7 +4,6 @@ import {} from "./firebaseInit.js";
 let storage = firebase.storage(); //nueva
 // referencia hije crea una referencia  de almacenamiento 
 let storageRef = storage.ref();
-//-------------REGISTRO DE USUARIO----------------
 
 export function registerUser (name, email, password) {
   
@@ -59,7 +58,7 @@ alert(error)
 // An error happened.
 });
 }
-verifyAccount();
+
 
 
 export function observer(){
@@ -100,15 +99,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
-/*
-export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
-let contenido = document.getElementById("contenido");
-contenido.innerHTML= `
-<h5></h5>
-<button id="cerrar" type="button">cierra sesión</button>
-`
-}
-aparece();*/
+
 //cerrar sesion
 export function closeSesion(){
 
@@ -149,25 +140,4 @@ firebase.auth().signInWithPopup(provider)
   // ...
 });
 }
-  /*
-//----------Imagen de perfil-------------------
-    // Vigilar selección archivo
-    export const upLoadProfilePhoto  = (e, uploader) => {
-      //Obtener archivo
-      let file = e.target.files[0];
-      // Crear un storage ref
-      let storageRef = firebase.storage().ref('profilePhoto/' + file.name);
-      // Subir archivo
-      let task = storageRef.put(file);
-      // Actualizar barra progreso
-      task.on('state_changed',
-        function progress(snapshot) {
-          let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          uploader.value = percentage;
-        },
-        function error(err) {
-        },
-        function complete() {
-        }
-        )
-    };*/
+ 

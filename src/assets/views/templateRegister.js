@@ -13,7 +13,7 @@ export const templateRegister = () => {
   </div>
   `
   document.getElementById('root').innerHTML = `
-  <div class="container">
+  <div class="contenedor">
   <h4>Registrate</h4>
   <input id="name" type="text" placeholder="Ingresa tu nombre">
   <input id="email" type="email" placeholder="Ingresa tu correo">
