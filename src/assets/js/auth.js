@@ -5,40 +5,10 @@ let storage = firebase.storage(); //nueva
 // referencia hije crea una referencia  de almacenamiento 
 let storageRef = storage.ref();
 
-
-
-// Guardar usuarios registrados en firestore
-const saveUsers = (name, email,uid,password) => {
-  let db = firebase.firestore();
-  db.collection("users").add({
-    uid: uid,
-    name: displayName,
-    email: email,
-     password:password
-
-  })
-    .then(function (docRef) {
-      console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function (error) {
-      console.error("Error adding document: ", error);
-    });
-}
-
-//-------------REGISTRO DE USUARIO----------------
-
 export function registerUser (name, email, password, profilePhoto) {
   
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
-   
-     
-    let user = firebase.auth().currentUser;
-    let uid = user.uid;
-      //console.log(uid);
-      saveUsers(name,email,uid,password); //llamamos a saveUser cuando el usuario se registre
-      verifyAccount();
-   
     
   })
   
@@ -55,6 +25,7 @@ export function registerUser (name, email, password, profilePhoto) {
       // ...
     });
    
+    verifyAccount()
 }
 //ingreso de usuariess registrades con firebase
 
@@ -87,7 +58,7 @@ alert(error)
 // An error happened.
 });
 }
-verifyAccount();
+
 
 
 export function observer(){
@@ -121,6 +92,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
+
 //cerrar sesion
 export function closeSesion(){
 
@@ -141,7 +113,6 @@ export function validateGoogle(){
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider)
 .then(function(result) {
-  
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
   // The signed-in user info.
@@ -162,25 +133,4 @@ firebase.auth().signInWithPopup(provider)
   // ...
 });
 }
-  /*
-//----------Imagen de perfil-------------------
-    // Vigilar selección archivo
-    export const upLoadProfilePhoto  = (e, uploader) => {
-      //Obtener archivo
-      let file = e.target.files[0];
-      // Crear un storage ref
-      let storageRef = firebase.storage().ref('profilePhoto/' + file.name);
-      // Subir archivo
-      let task = storageRef.put(file);
-      // Actualizar barra progreso
-      task.on('state_changed',
-        function progress(snapshot) {
-          let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          uploader.value = percentage;
-        },
-        function error(err) {
-        },
-        function complete() {
-        }
-        )
-    };*/
+ 
