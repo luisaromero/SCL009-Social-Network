@@ -4,32 +4,42 @@ import {} from "./firebaseInit.js";
 let storage = firebase.storage(); //nueva
 // referencia hije crea una referencia  de almacenamiento 
 let storageRef = storage.ref();
+
+
+
+// Guardar usuarios registrados en firestore
+const saveUsers = (name, email,uid,password) => {
+  let db = firebase.firestore();
+  db.collection("users").add({
+    uid: uid,
+    name: name,
+    email: email,
+     password:password
+
+  })
+    .then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function (error) {
+      console.error("Error adding document: ", error);
+    });
+}
+
 //-------------REGISTRO DE USUARIO----------------
 
 export function registerUser (name, email, password, profilePhoto) {
-  let db = firebase.firestore();
-  db.collection("users").add({//aqui es donde quedan guardados los usuaries
-
-    usuario: user.email,
-    displayName: user.displayName,
-    password:password,
-    usuarioId:user.uid
-})
+  
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
    
-    let starsRef = storageRef.child('profilePhoto/' + profilePhoto);
-     // creo carpeta hijo para guardar las fotos del usuario
-     starsRef.getDownloadURL().then(function (url) { // rescato URL de la foto
-      profilePhoto = url; // guardo la URL en profilePhoto      
-      let user = firebase.auth().currentUser;//toma informacion del perfil del usuario
-      user.updateProfile({
-        //hace visible nomre y foto
-        displayName: name,
-        photoURL: profilePhoto
      
-      })
-      })
+    let user = firebase.auth().currentUser;
+    let uid = user.uid;
+      //console.log(uid);
+      saveUsers(name,email,uid,password); //llamamos a saveUser cuando el usuario se registre
+      verifyAccount();
+   
+    
   })
   
 
@@ -44,7 +54,7 @@ export function registerUser (name, email, password, profilePhoto) {
   //alert(errorMessage);
       // ...
     });
-    verifyAccount()
+   
 }
 //ingreso de usuariess registrades con firebase
 
@@ -111,15 +121,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
-/*
-export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
-let contenido = document.getElementById("contenido");
-contenido.innerHTML= `
-<h5></h5>
-<button id="cerrar" type="button">cierra sesión</button>
-`
-}
-aparece();*/
 //cerrar sesion
 export function closeSesion(){
 
@@ -140,6 +141,7 @@ export function validateGoogle(){
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithPopup(provider)
 .then(function(result) {
+  
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
   // The signed-in user info.
