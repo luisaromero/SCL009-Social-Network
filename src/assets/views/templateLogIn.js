@@ -25,8 +25,8 @@ export const templateLogIn =() => {
         let password2=document.getElementById("password2").value; 
         validateEs(email2,password2);
         logIn(email2,password2)
-        if (observer===true) {
+       observer()
                      window.location.hash = '#/muro';
-                     }
+                     
                   })
                 }

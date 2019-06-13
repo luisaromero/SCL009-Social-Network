@@ -5,37 +5,11 @@ let storage = firebase.storage(); //nueva
 // referencia hije crea una referencia  de almacenamiento 
 let storageRef = storage.ref();
 
-
-
-// Guardar usuarios registrados en firestore
-const saveUsers = (name, email,uid,password) => {
-  let db = firebase.firestore();
-  let user = firebase.auth().currentUser;//toma informacion del perfil del usuario
-  db.collection("users").add({
-    usuario: user.email,
-    displayName:name,
-    password:password,
-    usuarioId:user.uid
-
-  })
-    .then(function (docRef) {
-      console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function (error) {
-      console.error("Error adding document: ", error);
-    });
-}
-
-//-------------REGISTRO DE USUARIO----------------
-
 export function registerUser (name, email, password, profilePhoto) {
- 
+  
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
-    let user = firebase.auth().currentUser;//toma informacion del perfil del usuario 
-   let uid = user.uid;
-    saveUsers((name, email,uid,password)); 
-     
+    
   })
   
 
@@ -84,7 +58,7 @@ alert(error)
 // An error happened.
 });
 }
-verifyAccount();
+
 
 
 export function observer(){
@@ -159,25 +133,4 @@ firebase.auth().signInWithPopup(provider)
   // ...
 });
 }
-  /*
-//----------Imagen de perfil-------------------
-    // Vigilar selección archivo
-    export const upLoadProfilePhoto  = (e, uploader) => {
-      //Obtener archivo
-      let file = e.target.files[0];
-      // Crear un storage ref
-      let storageRef = firebase.storage().ref('profilePhoto/' + file.name);
-      // Subir archivo
-      let task = storageRef.put(file);
-      // Actualizar barra progreso
-      task.on('state_changed',
-        function progress(snapshot) {
-          let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          uploader.value = percentage;
-        },
-        function error(err) {
-        },
-        function complete() {
-        }
-        )
-    };*/
+ 
