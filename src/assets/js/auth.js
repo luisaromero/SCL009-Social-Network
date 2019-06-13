@@ -12,7 +12,7 @@ const saveUsers = (name, email,uid,password) => {
   let db = firebase.firestore();
   db.collection("users").add({
     uid: uid,
-    name: displayName,
+    displayName : name,
     email: email,
      password:password
 
@@ -27,7 +27,7 @@ const saveUsers = (name, email,uid,password) => {
 
 //-------------REGISTRO DE USUARIO----------------
 
-export function registerUser (name, email, password, profilePhoto) {
+export function registerUser (name, email, password) {
   
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
@@ -36,13 +36,9 @@ export function registerUser (name, email, password, profilePhoto) {
     let user = firebase.auth().currentUser;
     let uid = user.uid;
       //console.log(uid);
-      saveUsers(name,email,uid,password); //llamamos a saveUser cuando el usuario se registre
-      verifyAccount();
-   
-    
+       //llamamos a saveUser cuando el usuario se registre
+       verifyAccount();
   })
-  
-
   .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -53,7 +49,7 @@ export function registerUser (name, email, password, profilePhoto) {
   //alert(errorCode);
   //alert(errorMessage);
       // ...
-    });
+    }); 
    
 }
 //ingreso de usuariess registrades con firebase
@@ -110,7 +106,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     
   }
    else {
-    window.location.hash = '#/inicio'; 
+
     //window.location.hash = '#/inicio';
     console.log("no existe usuario activo")
 

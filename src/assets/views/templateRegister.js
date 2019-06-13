@@ -1,10 +1,9 @@
 
 import { templateStart } from './templateStart.js';
-import {verifyAccount} from '../js/auth.js'
 import {registerUser} from '../js/auth.js'
 import {validateRegister} from '../../test/validation.js'
 import {templateLogIn} from './templateLogIn.js'
-verifyAccount();
+
 
 export const templateRegister = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -44,6 +43,7 @@ export const templateRegister = () => {
         registerUser(name, email, password);
            Swal.fire('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
            templateLogIn();
+           
            window.location.hash = '#/entrar'
      } })
   document.getElementById('btnBack').addEventListener('click', () => {
