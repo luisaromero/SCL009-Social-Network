@@ -13,7 +13,7 @@ export const templateRegister = () => {
   </div>
   `
   document.getElementById('root').innerHTML = `
-  <div class="container">
+  <div class="contenedor">
   <h4>Registrate</h4>
   <input id="name" type="text" placeholder="Ingresa tu nombre">
   <input id="email" type="email" placeholder="Ingresa tu correo">
@@ -30,6 +30,7 @@ export const templateRegister = () => {
       document.getElementById('invalidpassword').innerHTML="";
       let email= document.getElementById("email").value;
        let  password=document.getElementById("password").value;
+       let name= document.getElementById("name").value;
        let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
        let verif=validateRegister(email , password);
        if (!regular.test(email)){
