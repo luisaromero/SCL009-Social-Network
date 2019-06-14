@@ -1,4 +1,4 @@
-import {validateRegister, validateSignIn,validateWall} from './validation.js'
+import {validateRegister, validateSignIn,validateWall,validateName} from './validation.js'
 
 describe ('validateRegister',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña', () =>{
@@ -12,10 +12,21 @@ describe ('validateRegister',()=>{
     })
     it ('deberia retornar falso si no ingresas un correo valido', () =>{
         expect(validateRegister("luisamarcelaromerogmailcom","hola1234")).toBe(false);
-})
-})
 
-describe ('validateSignIn',()=>{
+   })
+})
+describe ('validateName',()=>{
+    it ('deberia retornar falso si el nombre de usuario es menor o igual a 3 digitos', () =>{
+        expect(validateName("j")).toBe(false);
+    })
+    it ('deberia retornar falso si es el nombre de usuario es mayor o igual a 19 digitos', () =>{
+        expect(validateName("holasoyunusuarioanonimo")).toBe(false);
+    })
+    it ('deberia retornar verdadero si es el nombre de usuario es entre 4 y 18 digitos', () =>{
+        expect(validateName("lisa simpsons")).toBe(true);
+    })
+   })
+ describe ('validateSignIn',()=>{
     it ('deberia retornar falso si es que no ingresa correo y contraseña registrados', () =>{
         expect(validateSignIn("","")).toBe(false);
     })
@@ -24,7 +35,7 @@ describe ('validateSignIn',()=>{
      
     })
     it ('deberia retornar falso si no ingresas un correo valido', () =>{
-        expect(validateSignIn("estesmimailgmail.com","micontraseña")).toBe(false);
+        expect(validateSignIn("estesmimail.com","micontraseña")).toBe(false);
     })
     it ('deberia retornar falso si ingresas una contraseña menor a 6 digitos', () =>{
         expect(validateSignIn("estesmimail@gmail.com","hi")).toBe(false);

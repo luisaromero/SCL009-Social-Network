@@ -9,19 +9,20 @@ export function registerUser (name, email, password) {
   
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
-   
-     
+    
     let user = firebase.auth().currentUser;
     let uid = user.uid;
       //console.log(uid);
        //llamamos a saveUser cuando el usuario se registre
        verifyAccount();
+       
   })
   .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message
-      alert('Este email ya se ha registrado antes.')
+      Swal.fire('Este email ya se ha registrado antes.')
+      window.location.hash ='#/registrate'
       console.log(errorCode);
       console.log(errorMessage);
   //alert(errorCode);
@@ -29,18 +30,23 @@ export function registerUser (name, email, password) {
       // ...
     }); 
    
-}
+} 
 
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export function logIn(email2, password2){
-console.log("holados");
-firebase.auth().signInWithEmailAndPassword(email2, password2)
+firebase.auth().signInWithEmailAndPassword(email2, password2).then(function(){
+})
 .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
+    if (errorMessage==='The password is invalid or the user does not have a password.'){
+      Swal.fire('La contraseña es inválida o el usuario no tiene contraseña')
+    }if (errorCode==='auth/user-not-found'){
+      Swal.fire('Email no registrado')
+    }
     console.log(errorCode)
-    alert(errorMessage);
+    console.log(errorMessage);
 
   })
 }
@@ -85,11 +91,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     var providerData = user.providerData;
    console.log(uid)
    console.log("usuario activo")
-    
   }
    else {
 
-    //window.location.hash = '#/inicio';
+    window.location.hash = '#/inicio';
     console.log("no existe usuario activo")
 
     // User is signed out.
@@ -124,6 +129,12 @@ firebase.auth().signInWithPopup(provider)
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
+  var photo = user.photoURL
+  
+  
+  
+
+  
   observer();
   // ...
 })

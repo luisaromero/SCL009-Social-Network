@@ -14,13 +14,15 @@ db.collection("posts").add({//aqui es donde quedan guardados los post
             userphoto: user.photoURL,
             displayName: user.displayName,
             descripcion:publish,
-            likes: 0
+            likes: 0 ,
+            
            
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+    
     readPostFb();
- 
+    
 })
 .catch(function(error) {
     console.error("Error adding document: ", error);
@@ -41,13 +43,12 @@ export const readPostFb = () => {
     //toPost.innerHTML = '';
     let db = firebase.firestore();
     db.collection("posts").get().then((querySnapshot) => {
-        
-       
    //     if(document.getElementById("containerWallPost")){
     //     document.getElementById("containerWallPost").innerHTML="";
       //  }
            querySnapshot.forEach((doc) => {
             postPrint(doc)
+            
             
     // -------------------ficha de comentarios----------------------                      
   

@@ -1,7 +1,9 @@
-import {verifyAccount} from '../js/auth.js'
+
 import { logIn,observer} from '../js/auth.js'
 import {validateEs} from '../../test/validation.js'
-verifyAccount()
+
+
+
 
 export const templateLogIn =() => {
     document.getElementById( "conteinerHead").innerHTML= ` 
@@ -16,17 +18,17 @@ export const templateLogIn =() => {
     <input id="email2" type="text" placeholder="Ingresa tu correo">
     <p id ="invalidEmail"><p>
     <input id= "password2" type="password" placeholder="Ingresa tu contraseña">
-    <p id ="invalidcontraseña2"><p>
+    <p id ="invalidpassword2"><p>
     <button id="btnLogIn" class ="btn" type="button">Acceder</button>
     </div>`
     document.getElementById('btnLogIn').addEventListener('click', () => {
-     console.log("hola");      
+      document.getElementById('invalidEmail').innerHTML="";
+      document.getElementById('invalidpassword2').innerHTML="";   
         let email2= document.getElementById("email2").value;
         let password2=document.getElementById("password2").value; 
-        validateEs(email2,password2);
-        logIn(email2,password2)
-        observer()
-        window.location.hash = '#/muro';
-                     
-                  })
-                }
+          validateEs(email2,password2);
+         if (logIn(email2,password2)===true)
+          observer()
+          window.location.hash= '#/muro'
+         })
+       }
