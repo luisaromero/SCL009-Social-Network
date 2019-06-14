@@ -16,7 +16,6 @@ db.collection("posts").add({//aqui es donde quedan guardados los post
             descripcion:publish,
             likes: 0 ,
             
-           
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);

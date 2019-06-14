@@ -1,8 +1,6 @@
 
 import { logIn,observer} from '../js/auth.js'
-import {validateEs} from '../../test/validation.js'
-
-
+import {validateEs} from '../js/validationTemplates.js'
 
 
 export const templateLogIn =() => {

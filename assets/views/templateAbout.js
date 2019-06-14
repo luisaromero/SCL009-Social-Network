@@ -5,11 +5,9 @@ import { templateStart } from './templateStart.js'
 
 
 export const templateAbout =() => {
-  document.getElementById( "conteinerHead").innerHTML= ` 
-  <div class= "conteinerH">
+  document.getElementById( "conteinerHead").innerHTML= `  <div class= "conteinerH">
   <img class="logo" src= "https://i.ibb.co/4J2DX8p/Whats-App-Image-2019-06-07-at-3-42-02-PM.jpg">
-  </div>
-  `
+  </div>` 
     document.getElementById('root').innerHTML = `
     <div class="somos">
     <div class="img"> 
