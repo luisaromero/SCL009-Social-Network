@@ -7,6 +7,12 @@ body{
     position: relative;
     height:100vh;
     /*overflow:hidden;*/
+    /*parallax*/
+    background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+
     
 }
 h1{
@@ -98,6 +104,7 @@ color:white;
     justify-content: space-around;
     margin-top: 10px;
     
+    
 }
 .btnComent{
     display: flex; /*aqui damos flexibilidad y se pone un numero al lado de otro */
@@ -188,9 +195,21 @@ color:white;
 }
 .toPost{
 
-    background-color: #b3fab7;
+    background-color: #b6f5b9;
 }
 .comentPost{
-    background-color: #fad3b3;
+    background-color: #c9f7c7;
+    padding: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    
 
+}
+.conteinerUser{
+    background-color: #1b740f;
+    color:white;
+}
+.btnClose{
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #cdf5b5;
+    font-size: 10px;
 }

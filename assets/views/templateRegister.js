@@ -1,10 +1,9 @@
 
 import { templateStart } from './templateStart.js';
-import {verifyAccount} from '../js/auth.js'
 import {registerUser} from '../js/auth.js'
 import {validateRegister} from '../../test/validation.js'
 import {templateLogIn} from './templateLogIn.js'
-verifyAccount();
+
 
 export const templateRegister = () => {
   document.getElementById( "conteinerHead").innerHTML= ` 
@@ -13,7 +12,7 @@ export const templateRegister = () => {
   </div>
   `
   document.getElementById('root').innerHTML = `
-  <div class="container">
+  <div class="contenedor">
   <h4>Registrate</h4>
   <input id="name" type="text" placeholder="Ingresa tu nombre">
   <input id="email" type="email" placeholder="Ingresa tu correo">

@@ -4,28 +4,19 @@ import {} from "./firebaseInit.js";
 let storage = firebase.storage(); //nueva
 // referencia hije crea una referencia  de almacenamiento 
 let storageRef = storage.ref();
-//-------------REGISTRO DE USUARIO----------------
 
-export function registerUser (name, email, password, profilePhoto) {
+export function registerUser (name, email, password) {
   
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .then(function(){
    
-    let starsRef = storageRef.child('profilePhoto/' + profilePhoto);
-     // creo carpeta hijo para guardar las fotos del usuario
-     starsRef.getDownloadURL().then(function (url) { // rescato URL de la foto
-      profilePhoto = url; // guardo la URL en profilePhoto      
-      let user = firebase.auth().currentUser;//toma informacion del perfil del usuario
-      user.updateProfile({
-        //hace visible nomre y foto
-        displayName: name,
-        photoURL: profilePhoto
      
-      })
-      })
+    let user = firebase.auth().currentUser;
+    let uid = user.uid;
+      //console.log(uid);
+       //llamamos a saveUser cuando el usuario se registre
+       verifyAccount();
   })
-  
-
   .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -36,12 +27,9 @@ export function registerUser (name, email, password, profilePhoto) {
   //alert(errorCode);
   //alert(errorMessage);
       // ...
-    });
-    verifyAccount()
+    }); 
+   
 }
-//ingreso de usuariess registrades con firebase
-
-
 
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export function logIn(email2, password2){
@@ -70,7 +58,7 @@ alert(error)
 // An error happened.
 });
 }
-verifyAccount();
+
 
 
 export function observer(){
@@ -82,6 +70,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
+
+    // userName.textContent = displayName;
+    // // userName.textContent = user.email;
+
+    // window.onload = function () {
+    // observer();
+    // }
   
     var emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
@@ -93,7 +88,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     
   }
    else {
-    window.location.hash = '#/inicio'; 
+
     //window.location.hash = '#/inicio';
     console.log("no existe usuario activo")
 
@@ -104,15 +99,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 }
 
 
-/*
-export function aparece(){// llamamos al div dodne se crea lo que puede ver el o la usuarix activx esta funcion se llama en la funcion de observador
-let contenido = document.getElementById("contenido");
-contenido.innerHTML= `
-<h5></h5>
-<button id="cerrar" type="button">cierra sesión</button>
-`
-}
-aparece();*/
+
 //cerrar sesion
 export function closeSesion(){
 
@@ -153,25 +140,4 @@ firebase.auth().signInWithPopup(provider)
   // ...
 });
 }
-  /*
-//----------Imagen de perfil-------------------
-    // Vigilar selección archivo
-    export const upLoadProfilePhoto  = (e, uploader) => {
-      //Obtener archivo
-      let file = e.target.files[0];
-      // Crear un storage ref
-      let storageRef = firebase.storage().ref('profilePhoto/' + file.name);
-      // Subir archivo
-      let task = storageRef.put(file);
-      // Actualizar barra progreso
-      task.on('state_changed',
-        function progress(snapshot) {
-          let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          uploader.value = percentage;
-        },
-        function error(err) {
-        },
-        function complete() {
-        }
-        )
-    };*/
+ 
