@@ -12,10 +12,21 @@ if (!regular.test(email)){
 
   return false
 }
+
 else {
     return true;
 }
 }
+
+export const validateName = (name) => {
+if (name.length <=3||name.length >=19) {
+  return false
+} else{
+  return true
+}
+}
+
+
 
 export const validateSignIn = (email2,password2) => {
   let regular2 =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -45,7 +56,7 @@ export const validateEs =(email2,password2)=> {
   }
  
   if (password2.length <=6){
-    document.getElementById("invalidcontraseña2").innerHTML="Ingresa contraseña mayor a 6 digitos"
+    document.getElementById("invalidpassword2").innerHTML="Ingresa contraseña mayor a 6 digitos"
 }
 }
 

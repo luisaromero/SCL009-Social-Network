@@ -9,7 +9,8 @@ export function postPrint(doc) {
   document.getElementById("containerWallPost").innerHTML+=
   ` <div  id="myModal" class= "contenedor">
 <div class= "conteinerUser">
-<p>${doc.data().displayName}</p>
+<img id="photoWall"class="photoUser"src ="${doc.data().userphoto}"/>  
+${doc.data().displayName}
 <textarea name="answer" id="toPost" class="comentPost" cols="30" rows="10">${doc.data().descripcion}</textarea>
 
 </div>
@@ -32,7 +33,7 @@ document.getElementById( "conteinerHead").innerHTML= `
 `
   document.getElementById('root').innerHTML = `
   <div  id="myModal" class= "contenedor">
-  <div id="user">></div>
+  <div id="user"></div>
         <textarea name="toPost" id="toPost" class="toPost" cols="30" rows="10" placeholder="¿Qué  está pasando con tu huerta?"></textarea>
       
  
