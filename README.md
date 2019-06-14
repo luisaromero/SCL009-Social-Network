@@ -1,3 +1,32 @@
+![logo](img/logo.jpeg)
+# ketrawe 
+Su significado es tierra cultivable, esta aplicación busca ser una constribución en el respeto y el amor por la tierra y su poder, llamando a la colectividad y el conocimiento  desde lo que hoy llamamos huertas; huerta como un modo de autonomia alimentaria y de conección.
+ketrawue es una red social de seres humanes que cultivan de distintas maneras, donde podran exponer dudas y también aprendizajes de su experiencia, junto con esto compartir actividades, compartir semilas y alimentos. tendran un espacio donde se podran contactar y encontrar con huertas comunitarias de su sector  y asi  apoyar en su crecimiento.
+
+
+
+![plantar](img/plantar.gif)
+### Usuaries
+Esta pensada para personas desde los 15 años hasta la edad que sea, que tengan una huerta o pretendan  empezar con una, son usuaries normalmente informades y que creen en el trabajo colectivo y solidario de la creación de estos espcios.
+####encuesta usuaries.
+![encuesta](img/encuesta.gif)
+
+### prototipo de baja calidad
+![proto1](img/proto1.jpeg)
+![proto2](img/proto2.jpeg)
+![proto3](img/proto3.jpeg)
+![proto4](img/proto4.jpeg)
+![proto5](img/proto5.jpeg)
+![proto6](img/proto6.jpeg)
+
+### prototipo de alta fidelidad de primera historia de usuario 
+
+https://www.figma.com/file/CDuIdQKMe5PaB9YEXKvo0lAu/Untitled?node-id=0%3A1
+
+### Como fuimos plaificandonos en Trello
+
+https://trello.com/b/Mqlz9FJI/red-social
+
 ### Historias de usuario
 
 
@@ -37,7 +66,7 @@ Definición de terminado:
 - Debes haber recibido code review de al menos una compañera de otro equipo.
 - Haces test unitarios y, además, has testeado tu producto manualmente.
 - Hiciste pruebas de usabilidad e incorporaste el feedback del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+
 
 4. COMO usuario amante de las plantas QUIERO publicar en el muro PARA poder resolver mis dudas o compartir experiencias
 
@@ -86,3 +115,6 @@ Criterios de aceptación :
 - Espacio para introducir el comentario
 -Contar con botón “comentar”
 -Visualizar comentario escrito. 
+
+
+![tomate](img/tomates.jpg)

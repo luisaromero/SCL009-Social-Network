@@ -1,8 +1,8 @@
 
 import { templateStart } from './templateStart.js';
-import {registerUser,observer,verifyAccount} from '../js/auth.js'
+import {registerUser,verifyAccount} from '../js/auth.js'
 import {validateRegister} from '../../test/validation.js'
-import {templateLogIn} from './templateLogIn.js'
+
 verifyAccount();
 
 
@@ -16,6 +16,7 @@ export const templateRegister = () => {
   <div class="contenedor">
   <h4>Registrate</h4>
   <input id="name" type="text" placeholder="Ingresa tu nombre">
+  <p id="invalidName"></p>
   <input id="email" type="email" placeholder="Ingresa tu correo">
   <p id="invalid"></p>
   <input id="password" type="password" placeholder="Ingresa tu contraseña">
@@ -28,8 +29,10 @@ export const templateRegister = () => {
     document.getElementById('btnSend').addEventListener('click', () => {
       document.getElementById('invalid').innerHTML="";
       document.getElementById('invalidpassword').innerHTML="";
+      document.getElementById('invalidName').innerHTML="";
       let email= document.getElementById("email").value;
        let  password=document.getElementById("password").value;
+       let name = document.getElementById("name").value;
        let regular =/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
        let verif=validateRegister(email , password);
        if (!regular.test(email)){
@@ -38,12 +41,16 @@ export const templateRegister = () => {
        if (password.length <=6){
         document.getElementById("invalidpassword").innerHTML="Ingresa contraseña mayor a 6 digitos"
        } 
-    
+       if(name.length <=3||name.length >=19){ 
+        document.getElementById("invalidName").innerHTML="Ingresa nombre entre 4 y 18 digitos"
+           }
        if(verif=== true) { 
         registerUser(name, email, password);
            Swal.fire('Cuenta registrada con exito , te hemos enviamos un corrreo de confirmación')
            window.location.hash = '#/inicio'
-     } })
+     }
+    })
+        
   document.getElementById('btnBack').addEventListener('click', () => {
     // Nos lleva al inicio de la pagina
     // cambiar el hash a #/inicio
