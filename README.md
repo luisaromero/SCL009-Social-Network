@@ -19,7 +19,7 @@ Esta pensada para personas desde los 15 años hasta la edad que sea, que tengan 
 ![proto5](img/proto5.jpeg)
 ![proto6](img/proto6.jpeg)
 
-### prototipo de alta fidelidad de primera historia de usuario 
+### Prototipo de alta fidelidad de primera historia de usuario 
 
 https://www.figma.com/file/CDuIdQKMe5PaB9YEXKvo0lAu/Untitled?node-id=0%3A1
 
@@ -115,6 +115,8 @@ Criterios de aceptación :
 - Espacio para introducir el comentario
 -Contar con botón “comentar”
 -Visualizar comentario escrito. 
+### Testeos de usabilidad
+Los usuarios nos dieron como feedback , acerca de las historias de usuario , comentarios como , que los colores e imagen de fondo eran adecuadas y de su gusto y también acerca del botón de quienes somos , qué estaba abajo , para serlo más visible fuesee en un lugar más visible a la vista . Qué incluimos en nuestro css y nuestro trabajo .
 
 
 ![tomate](img/tomates.jpg)
