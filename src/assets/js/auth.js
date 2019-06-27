@@ -30,7 +30,7 @@ export function registerUser (name, email, password) {
       // ...
     }); 
    
-} 
+} //
 
 //-----------------INGRESO USUARIO REGISTRADO ------------------
 export function logIn(email2, password2){
