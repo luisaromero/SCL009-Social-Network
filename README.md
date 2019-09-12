@@ -1,6 +1,6 @@
 ![logo](img/logo.jpeg)
-# ketrawe 
-Su significado es tierra cultivable, esta aplicación busca ser una constribución en el respeto y el amor por la tierra y su poder, llamando a la colectividad y el conocimiento  desde lo que hoy llamamos huertas; huerta como un modo de autonomia alimentaria y de conección.
+# KETRAWE
+**Su significado es tierra cultivable, esta aplicación busca ser una constribución en el respeto y el amor por la tierra y su poder, llamando a la colectividad y el conocimiento  desde lo que hoy llamamos huertas; huerta como un modo de autonomia alimentaria y de conección.**
 ketrawue es una red social de seres humanes que cultivan de distintas maneras, donde podran exponer dudas y también aprendizajes de su experiencia, junto con esto compartir actividades, compartir semilas y alimentos. tendran un espacio donde se podran contactar y encontrar con huertas comunitarias de su sector  y asi  apoyar en su crecimiento.
 
 
@@ -11,7 +11,7 @@ Esta pensada para personas desde los 15 años hasta la edad que sea, que tengan 
 ####encuesta usuaries.
 ![encuesta](img/encuesta.gif)
 
-### prototipo de baja calidad
+### Prototipo de baja fidelidad
 ![proto1](img/proto1.jpeg)
 ![proto2](img/proto2.jpeg)
 ![proto3](img/proto3.jpeg)
